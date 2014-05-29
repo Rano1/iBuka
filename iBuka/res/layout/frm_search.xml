@@ -4,6 +4,11 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="search" />
+
     <GridView
         android:id="@+id/searchRecomGrid"
         android:layout_width="fill_parent"

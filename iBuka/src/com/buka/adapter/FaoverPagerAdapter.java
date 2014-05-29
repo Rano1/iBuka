@@ -11,28 +11,23 @@ import android.view.ViewGroup;
 
 public class FaoverPagerAdapter extends FragmentPagerAdapter {
 	ArrayList<Fragment> frmList;
-	FragmentManager fm;
 
 	public FaoverPagerAdapter(FragmentManager fm, ArrayList<Fragment> frmList) {
 		super(fm);
-		this.fm = fm;
 		this.frmList = frmList;
 	}
 
 	@Override
 	public Fragment getItem(int position) {
-		return frmList.get(position);
+		if(frmList != null && frmList.size() !=0){
+			return frmList.get(position);
+		}
+		return null;
 	}
 
 	@Override
 	public int getCount() {
 		return frmList == null ? 0 : frmList.size();
-	}
-
-	@Override
-	public boolean isViewFromObject(View view, Object object) {
-		// TODO Auto-generated method stub
-		return view == object;
 	}
 
 }

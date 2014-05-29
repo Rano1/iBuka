@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -55,6 +56,27 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 		//≥ı ºªØViewPager
 		mAdapter = new FaoverPagerAdapter(fm, fragmentList);
 		viewpager_favor.setAdapter(mAdapter);
+		viewpager_favor.setOnPageChangeListener(new OnPageChangeListener() {
+			
+			@Override
+			public void onPageSelected(int position) {
+				// TODO Auto-generated method stub
+				viewpager_favor.setCurrentItem(position);
+			}
+			
+			@Override
+			public void onPageScrolled(int position, float positionOffset,
+					int positionOffsetPixels) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onPageScrollStateChanged(int state) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		viewpager_favor.setCurrentItem(0);
 		return view;
 	}

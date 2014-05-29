@@ -87,7 +87,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 
 	/** 改变说点击的按钮的状态 */
 	public void checkTab(String tag , ImageView check){
-		mTabHost.onTabChanged(tag);
+//		mTabHost.onTabChanged(tag);
+		mTabHost.setCurrentTabByTag(tag);
 		tab_btn_favor.setEnabled(true);
 		tab_btn_recom.setEnabled(true);
 		tab_btn_search.setEnabled(true);
