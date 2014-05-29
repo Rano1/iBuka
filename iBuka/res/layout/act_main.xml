@@ -1,16 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:fadingEdge="none"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/tabbarLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_gravity="bottom"
+                android:background="@drawable/tabbar_bg"
+                android:drawingCacheQuality="high"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/tab_btn_favor"
+                    style="@style/tab_img"
+                    android:src="@drawable/btn_favor" />
+
+                <ImageView
+                    android:id="@+id/tab_btn_recom"
+                    style="@style/tab_img"
+                    android:src="@drawable/btn_recom" />
+
+                <ImageView
+                    android:id="@+id/tab_btn_search"
+                    style="@style/tab_img"
+                    android:src="@drawable/btn_search" />
+
+                <ImageView
+                    android:id="@+id/tab_btn_more"
+                    style="@style/tab_img"
+                    android:src="@drawable/btn_more" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.app.FragmentTabHost>
 
 </RelativeLayout>

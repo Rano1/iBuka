@@ -21,13 +21,40 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int bg=0x7f020000;
+        public static final int btn_favor=0x7f020001;
+        public static final int btn_more=0x7f020002;
+        public static final int btn_recom=0x7f020003;
+        public static final int btn_search=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int icon=0x7f020006;
+        public static final int icon_tab_favor=0x7f020007;
+        public static final int icon_tab_favor_s=0x7f020008;
+        public static final int icon_tab_more=0x7f020009;
+        public static final int icon_tab_more_s=0x7f02000a;
+        public static final int icon_tab_recom=0x7f02000b;
+        public static final int icon_tab_recom_s=0x7f02000c;
+        public static final int icon_tab_search=0x7f02000d;
+        public static final int icon_tab_search_s=0x7f02000e;
+        public static final int popup_bg=0x7f02000f;
+        public static final int startup=0x7f020010;
+        public static final int tabbar_bg=0x7f020011;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int action_settings=0x7f080005;
+        public static final int tab_btn_favor=0x7f080001;
+        public static final int tab_btn_more=0x7f080004;
+        public static final int tab_btn_recom=0x7f080002;
+        public static final int tab_btn_search=0x7f080003;
+        public static final int tabbarLayout=0x7f080000;
     }
     public static final class layout {
         public static final int act_main=0x7f030000;
+        public static final int act_welcome=0x7f030001;
+        public static final int frm_favor=0x7f030002;
+        public static final int frm_more=0x7f030003;
+        public static final int frm_recom=0x7f030004;
+        public static final int frm_search=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -38,15 +65,20 @@ public final class R {
         public static final int hello_world=0x7f050002;
     }
     public static final class style {
+        /**  <item name="android:activityOpenEnterAnimation">@anim/anim_enter</item> 
+ <item name="android:activityOpenExitAnimation">@anim/anim_exit</item> 
+ <item name="android:activityCloseEnterAnimation">@anim/anim_back_enter</item> 
+ <item name="android:activityCloseExitAnimation">@anim/anim_back_exit</item> 
+         */
+        public static final int AnimationActivity=0x7f060002;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
+
+
+
+    
 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
@@ -64,5 +96,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int tab_img=0x7f060003;
     }
 }
