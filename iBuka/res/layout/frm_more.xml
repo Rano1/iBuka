@@ -1,12 +1,333 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="more" />
+    <LinearLayout
+        android:id="@+id/layout_top_bar"
+        style="@style/topbar" >
 
-</LinearLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/tabMore"
+            android:textColor="@color/listTitle"
+            android:textSize="15.0sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top_bar"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/layout_feedback_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/feedback_m" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/moreFeedback"
+                        android:textColor="@color/listTitle"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_setting_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_bottom"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/setting_m" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/moreSetting"
+                        android:textColor="@color/listTitle"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/layout_user_center_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/user_m" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/moreUser"
+                        android:textColor="@color/listTitle"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_download_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_center"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/download_m" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/moreDownloadMar"
+                        android:textColor="@color/listTitle"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_download_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15.0dip"
+                        android:background="@drawable/more_item_tips_bg"
+                        android:includeFontPadding="false"
+                        android:paddingBottom="2.0dip"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:paddingTop="2.0dip"
+                        android:text="2"
+                        android:textColor="#ffeeeeee"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_local_manga_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_bottom"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/checkdl_m" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/moreLocalManga"
+                        android:textColor="@color/listTitle"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/layout_recom_app_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/recom_app_m" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/moreRecomApp"
+                        android:textColor="@color/listTitle"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_partner_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_bottom"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/partner_m" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/morePartner"
+                        android:textColor="@color/listTitle"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/layout_update_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/update_m" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/moreUpdate"
+                        android:textColor="@color/listTitle"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_about_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_bottom"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/info_m" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/moreAbout"
+                        android:textColor="@color/listTitle"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        style="@style/shadow_top"
+        android:layout_below="@id/layout_top_bar" />
+
+    <ImageView
+        style="@style/shadow_bottom"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

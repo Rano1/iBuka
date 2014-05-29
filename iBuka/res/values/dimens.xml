@@ -3,5 +3,27 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="com_facebook_usersettingsfragment_profile_picture_width">64.0dip</dimen>
+    <dimen name="com_facebook_usersettingsfragment_profile_picture_height">64.0dip</dimen>
+    <dimen name="com_facebook_loginview_padding_left">42.0dip</dimen>
+    <dimen name="com_facebook_loginview_padding_right">0.0dip</dimen>
+    <dimen name="com_facebook_loginview_padding_top">0.0dip</dimen>
+    <dimen name="com_facebook_loginview_padding_bottom">0.0dip</dimen>
+    <dimen name="com_facebook_loginview_width">205.0dip</dimen>
+    <dimen name="com_facebook_loginview_height">44.0dip</dimen>
+    <dimen name="com_facebook_loginview_text_size">16.0sp</dimen>
+    <dimen name="com_facebook_profilepictureview_preset_size_small">50.0dip</dimen>
+    <dimen name="com_facebook_profilepictureview_preset_size_normal">100.0dip</dimen>
+    <dimen name="com_facebook_profilepictureview_preset_size_large">180.0dip</dimen>
+    <dimen name="activity_read_setting_top_height">48.0dip</dimen>
+    <dimen name="read_mode_setting_text_size">15.0sp</dimen>
+    <dimen name="read_mode_setting_desc_size">13.0sp</dimen>
+    <dimen name="read_mode_setting_text_margin_left">10.0dip</dimen>
+    <dimen name="read_mode_setting_desc_margin_left">10.0dip</dimen>
+    <dimen name="read_mode_setting_text_margin_top">10.0dip</dimen>
+    <dimen name="read_mode_setting_desc_margin_top">5.0dip</dimen>
+    <dimen name="read_mode_setting_split_line_margin_top">10.0dip</dimen>
+    <dimen name="read_setting_button_margin_right">10.0dip</dimen>
+    <dimen name="read_setting_split_line_height">1.0px</dimen>
 
 </resources>

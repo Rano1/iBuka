@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+<!--     <RelativeLayout style="@style/topbar" > -->
+
+<!--         <ImageView -->
+<!--             android:id="@+id/backupBack" -->
+<!--             style="@style/topbar_back_btn" /> -->
+
+<!--         <TextView -->
+<!--             android:layout_width="fill_parent" -->
+<!--             android:layout_height="fill_parent" -->
+<!--             android:gravity="center" -->
+<!--             android:text="@string/favbackup" -->
+<!--             android:textColor="@color/listTitle" -->
+<!--             android:textSize="16.0sp" /> -->
+<!--     </RelativeLayout> -->
+
+<!--     <ListView -->
+<!--         android:id="@+id/buckupList" -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="fill_parent" -->
+<!--         android:layout_marginTop="48.0dip" -->
+<!--         android:cacheColorHint="#00000000" -->
+<!--         android:divider="@drawable/list_line" -->
+<!--         android:fadingEdge="none" -->
+<!--         android:listSelector="#00000000" -->
+<!--         android:scrollingCache="false" /> -->
+
+<!--     <include layout="@layout/viewdownloadstate" /> -->
+
+<!--     <ImageView -->
+<!--         style="@style/shadow_top" -->
+<!--         android:layout_marginTop="48.0dip" /> -->
+
+<!--     <ImageView -->
+<!--         style="@style/shadow_bottom" -->
+<!--         android:layout_alignParentBottom="true" /> -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:text="111" />
+
+</RelativeLayout>

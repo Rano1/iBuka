@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.ibuka.manga.ui.ViewRecommend xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewRecommend"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+<!--     <cn.ibuka.manga.ui.WaterfallView -->
+<!--         android:id="@+id/waterfallView" -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="fill_parent" -->
+<!--         android:fadingEdge="none" /> -->
+
+<!--     <include layout="@layout/viewdownloadstate" /> -->
+
+</cn.ibuka.manga.ui.ViewRecommend>

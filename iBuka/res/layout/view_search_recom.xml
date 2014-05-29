@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip"
+        android:text="@string/searchNoResultTitle"
+        android:textColor="@color/listTitle"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/shTips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:text="@string/searchNoResultTips"
+        android:textColor="@color/text"
+        android:textSize="13.0sp" />
+
+    <GridView
+        android:id="@+id/searchRecomGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10.0dip"
+        android:cacheColorHint="#00000000"
+        android:columnWidth="83.0dip"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:numColumns="auto_fit" />
+
+</LinearLayout>

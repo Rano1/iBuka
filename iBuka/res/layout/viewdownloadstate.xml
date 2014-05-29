@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.ibuka.manga.ui.ViewDownloadStatusBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/downloadStatusBox"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:visibility="gone" >
+
+    <ProgressBar
+        android:id="@+id/progBar"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_centerInParent="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/progress_drawable_large"
+        android:indeterminateDuration="500"
+        android:indeterminateOnly="true" />
+
+    <LinearLayout
+        android:id="@+id/downLoadErrMsgBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/downLoadErrText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dip"
+            android:textColor="@color/listTitle" />
+
+        <Button
+            android:id="@+id/btnListLoadErr"
+            style="@style/Btn"
+            android:text="@string/listReBtnText" />
+    </LinearLayout>
+
+</cn.ibuka.manga.ui.ViewDownloadStatusBox>

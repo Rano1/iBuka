@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/l1001" />
+    <item android:duration="100" android:drawable="@drawable/l1002" />
+    <item android:duration="100" android:drawable="@drawable/l1003" />
+    <item android:duration="100" android:drawable="@drawable/l1004" />
+    <item android:duration="100" android:drawable="@drawable/l1005" />
+    <item android:duration="100" android:drawable="@drawable/l1006" />
+    <item android:duration="100" android:drawable="@drawable/l1007" />
+    <item android:duration="100" android:drawable="@drawable/l1008" />
+    <item android:duration="100" android:drawable="@drawable/l1009" />
+    <item android:duration="100" android:drawable="@drawable/l1010" />
+    <item android:duration="100" android:drawable="@drawable/l1011" />
+    <item android:duration="100" android:drawable="@drawable/l1012" />
+    <item android:duration="100" android:drawable="@drawable/l1013" />
+    <item android:duration="100" android:drawable="@drawable/l1014" />
+    <item android:duration="100" android:drawable="@drawable/l1015" />
+    <item android:duration="100" android:drawable="@drawable/l1016" />
+    <item android:duration="100" android:drawable="@drawable/l1017" />
+    <item android:duration="100" android:drawable="@drawable/l1018" />
+    <item android:duration="100" android:drawable="@drawable/l1019" />
+    <item android:duration="100" android:drawable="@drawable/l1020" />
+    <item android:duration="100" android:drawable="@drawable/l1021" />
+    <item android:duration="100" android:drawable="@drawable/l1022" />
+    <item android:duration="100" android:drawable="@drawable/l1023" />
+    <item android:duration="100" android:drawable="@drawable/l1024" />
+    <item android:duration="100" android:drawable="@drawable/l1025" />
+    <item android:duration="100" android:drawable="@drawable/l1026" />
+    <item android:duration="100" android:drawable="@drawable/l1027" />
+</animation-list>

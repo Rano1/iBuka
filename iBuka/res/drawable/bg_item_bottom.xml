@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="1.5dip" android:bottomRightRadius="1.5dip" />
+                    <solid android:color="@color/hintColor" />
+                </shape>
+            </item>
+            <item android:left="1.0px" android:right="1.0px" android:bottom="2.0px">
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="1.0dip" android:bottomRightRadius="1.0dip" />
+                    <solid android:color="@color/pressBarBg" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="1.5dip" android:bottomRightRadius="1.5dip" />
+                    <solid android:color="@color/hintColor" />
+                </shape>
+            </item>
+            <item android:left="1.0px" android:right="1.0px" android:bottom="2.0px">
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="1.0dip" android:bottomRightRadius="1.0dip" />
+                    <solid android:color="@color/lightBg" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
