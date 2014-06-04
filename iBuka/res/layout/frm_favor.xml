@@ -2,27 +2,93 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:background="@color/bgColor"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+    <RelativeLayout style="@style/topbar" >
 
-        <Button
-            android:id="@+id/btn_favor_collect"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="收藏" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dip" >
 
-        <Button
-            android:id="@+id/btn_favor_download"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="下载" />
-    </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:src="@drawable/def_proimg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dip"
+                android:text="登录" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <RadioGroup
+                android:id="@+id/rgroup_favor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rbtn_favor_collect"
+                    android:layout_width="70dip"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bar_btn_divide"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="收藏"
+                    android:textColor="@drawable/bar_btn_text_color_emph" />
+
+                <!-- <View -->
+                <!-- android:layout_width="1dip" -->
+                <!-- android:layout_height="match_parent" -->
+                <!-- android:background="@drawable/top_tab_not_divide" /> -->
+
+                <RadioButton
+                    android:id="@+id/rbtn_favor_history"
+                    android:layout_width="70dip"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bar_btn_divide"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="历史"
+                    android:textColor="@drawable/bar_btn_text_color" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="8dip"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/view_favor_collect_divide"
+                    android:layout_width="70dip"
+                    android:layout_height="8dip"
+                    android:background="@drawable/top_tab_2_no_divide" />
+
+                <ImageView
+                    android:id="@+id/view_favor_history_divide"
+                    android:layout_width="70dip"
+                    android:layout_height="8dip"
+                    android:background="@drawable/top_tab_2_no_divide"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager_favor"

@@ -12,20 +12,27 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.buka.R;
-import com.buka.adapter.FaoverPagerAdapter;
+import com.buka.adapter.PagerAdapter;
 import com.buka.base.BaseFragment;
-import com.buka.fragment.favor.CollectFragment;
+import com.buka.fragment.favor.FavorCollect;
 
 public class FavorFragment extends BaseFragment implements OnClickListener{
-	FaoverPagerAdapter mAdapter;
+	PagerAdapter mAdapter;
 	private ViewPager viewpager_favor;
-	private Button btn_favor_collect;
-	private Button btn_favor_download;
+	private RadioGroup rgroup_favor;
+	private RadioButton rbtn_favor_collect;
+	private RadioButton rbtn_favor_history;
+	private ImageView view_favor_collect_divide;
+	private ImageView view_favor_history_divide;
 	FragmentManager fm;
-	private CollectFragment collectFragment;
-	private CollectFragment downloadFragment;
+	private FavorCollect collectFragment;
+	private FavorCollect downloadFragment;
 	private ArrayList<Fragment> fragmentList;
 	
 	@Override
@@ -38,8 +45,8 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 
 	private void initFragment() {
 		fragmentList = new ArrayList<Fragment>();
-		collectFragment = new CollectFragment();
-		downloadFragment = new CollectFragment();
+		collectFragment = new FavorCollect();
+		downloadFragment = new FavorCollect();
 		fragmentList.add(collectFragment);
 		fragmentList.add(downloadFragment);
 	}
@@ -49,19 +56,55 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 			Bundle savedInstanceState) {
 		View view = LayoutInflater.from(activity).inflate(R.layout.frm_favor, null);
 		viewpager_favor = (ViewPager) view.findViewById(R.id.viewpager_favor);
-		btn_favor_collect = (Button) view.findViewById(R.id.btn_favor_collect);
-		btn_favor_download = (Button) view.findViewById(R.id.btn_favor_download);
-		btn_favor_collect.setOnClickListener(this);
-		btn_favor_download.setOnClickListener(this);
+		rgroup_favor = (RadioGroup) view.findViewById(R.id.rgroup_favor);
+		rbtn_favor_collect = (RadioButton) view.findViewById(R.id.rbtn_favor_collect);
+		rbtn_favor_history = (RadioButton) view.findViewById(R.id.rbtn_favor_history);
+		view_favor_collect_divide = (ImageView) view.findViewById(R.id.view_favor_collect_divide);
+		view_favor_history_divide = (ImageView) view.findViewById(R.id.view_favor_history_divide);
+		rgroup_favor.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				switch (checkedId) {
+				case R.id.rbtn_favor_collect:
+					viewpager_favor.setCurrentItem(0);
+					rbtn_favor_collect.setTextColor(getResources().getColor(R.drawable.bar_btn_text_color_emph));
+					rbtn_favor_history.setTextColor(getResources().getColor(R.drawable.bar_btn_text_color));
+					view_favor_collect_divide.setVisibility(View.VISIBLE);
+					view_favor_history_divide.setVisibility(View.INVISIBLE);
+					break;
+				case R.id.rbtn_favor_history:
+					viewpager_favor.setCurrentItem(1);
+					rbtn_favor_collect.setTextColor(getResources().getColor(R.drawable.bar_btn_text_color));
+					rbtn_favor_history.setTextColor(getResources().getColor(R.drawable.bar_btn_text_color_emph));
+					view_favor_collect_divide.setVisibility(View.INVISIBLE);
+					view_favor_history_divide.setVisibility(View.VISIBLE);
+					break;
+
+				default:
+					break;
+				}
+			}
+		});
 		//≥ı ºªØViewPager
-		mAdapter = new FaoverPagerAdapter(fm, fragmentList);
+		mAdapter = new PagerAdapter(fm, fragmentList);
 		viewpager_favor.setAdapter(mAdapter);
 		viewpager_favor.setOnPageChangeListener(new OnPageChangeListener() {
 			
 			@Override
 			public void onPageSelected(int position) {
 				// TODO Auto-generated method stub
-				viewpager_favor.setCurrentItem(position);
+				switch (position) {
+				case 0:
+					rgroup_favor.check(R.id.rbtn_favor_collect);
+					break;
+				case 1:
+					rgroup_favor.check(R.id.rbtn_favor_history);
+					break;
+
+				default:
+					break;
+				}
 			}
 			
 			@Override
@@ -77,7 +120,7 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 				
 			}
 		});
-		viewpager_favor.setCurrentItem(0);
+		rgroup_favor.check(R.id.rbtn_favor_collect);
 		return view;
 	}
 	
@@ -96,12 +139,6 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.btn_favor_collect:
-			viewpager_favor.setCurrentItem(0);
-			break;
-		case R.id.btn_favor_download:
-			viewpager_favor.setCurrentItem(1);
-			break;
 
 		default:
 			break;

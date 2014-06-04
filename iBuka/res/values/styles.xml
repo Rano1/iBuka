@@ -463,4 +463,11 @@
         <item name="android:textCursorDrawable">@null</item>
     </style>
 
+    <style name="recom_topbar_divide">
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/top_tab_2_no_divide</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
 </resources>

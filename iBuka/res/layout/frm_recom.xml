@@ -1,6 +1,98 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/bg" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioGroup
+            android:id="@+id/rgroup_recom"
+            style="@style/topbar" >
+
+            <RadioButton
+                android:id="@+id/rbtn_recom_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bar_btn_divide"
+                android:button="@null"
+                android:gravity="center"
+                android:text="精彩推荐" />
+
+            <RadioButton
+                android:id="@+id/rbtn_recom_hot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bar_btn_divide"
+                android:button="@null"
+                android:gravity="center"
+                android:text="热门连载" />
+
+            <RadioButton
+                android:id="@+id/rbtn_recom_gamescenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bar_btn_divide"
+                android:button="@null"
+                android:gravity="center"
+                android:text="游戏中心" />
+
+            <RadioButton
+                android:id="@+id/rbtn_recom_recent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bar_btn_divide"
+                android:button="@null"
+                android:gravity="center"
+                android:text="最近更新" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dip"
+            android:layout_alignBottom="@id/rgroup_recom"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/view_recom_recommend_divide"
+                style="@style/recom_topbar_divide" />
+
+            <ImageView
+                android:id="@+id/view_recom_hot_divide"
+                style="@style/recom_topbar_divide" />
+
+            <ImageView
+                android:id="@+id/view_recom_gamescenter_divide"
+                style="@style/recom_topbar_divide" />
+
+            <ImageView
+                android:id="@+id/view_recom_recent_divide"
+                style="@style/recom_topbar_divide" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- <FrameLayout -->
+    <!-- android:id="@+id/recom_frame_content" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" > -->
+    <!-- </FrameLayout> -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/tabbar_bg" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpage_recom"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

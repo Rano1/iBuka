@@ -9,10 +9,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FaoverPagerAdapter extends FragmentPagerAdapter {
+public class PagerAdapter extends FragmentPagerAdapter {
 	ArrayList<Fragment> frmList;
 
-	public FaoverPagerAdapter(FragmentManager fm, ArrayList<Fragment> frmList) {
+	public PagerAdapter(FragmentManager fm, ArrayList<Fragment> frmList) {
 		super(fm);
 		this.frmList = frmList;
 	}
