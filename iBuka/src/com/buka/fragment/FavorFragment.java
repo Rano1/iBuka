@@ -2,6 +2,7 @@ package com.buka.fragment;
 
 import java.util.ArrayList;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,10 +14,12 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
+import com.buka.LoginActivity;
 import com.buka.R;
 import com.buka.adapter.PagerAdapter;
 import com.buka.base.BaseFragment;
@@ -34,6 +37,7 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 	private FavorCollect collectFragment;
 	private FavorCollect downloadFragment;
 	private ArrayList<Fragment> fragmentList;
+	private LinearLayout ll_login;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -55,6 +59,8 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = LayoutInflater.from(activity).inflate(R.layout.frm_favor, null);
+		ll_login = (LinearLayout) view.findViewById(R.id.ll_login);
+		ll_login.setOnClickListener(this);
 		viewpager_favor = (ViewPager) view.findViewById(R.id.viewpager_favor);
 		rgroup_favor = (RadioGroup) view.findViewById(R.id.rgroup_favor);
 		rbtn_favor_collect = (RadioButton) view.findViewById(R.id.rbtn_favor_collect);
@@ -139,7 +145,9 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-
+		case R.id.ll_login:
+			startActivity(new Intent(activity, LoginActivity.class));
+			break;
 		default:
 			break;
 		}
