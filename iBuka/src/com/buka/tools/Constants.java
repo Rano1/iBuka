@@ -16,6 +16,7 @@ public class Constants {
 	}
 	
 	public static final String[] IMAGES_CATE = new String[] {
+		"http://img0.imgtn.bdimg.com/it/u=3529685384,1707880994&fm=21&gp=0.jpg",
 		"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
 		"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
 		"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
@@ -24,6 +25,5 @@ public class Constants {
 		"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
 		"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
 		"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-		"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-		"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg", };
+		"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg"};
 }

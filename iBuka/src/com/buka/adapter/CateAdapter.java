@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 /**
  * 栏目适配器
  */
@@ -31,7 +32,14 @@ public class CateAdapter extends BaseAdapter {
 	public CateAdapter(Context context, ArrayList<CateEntity> list) {
 		this.context = context;
 		this.list = list;
-		options = Options.getListOptions();
+		options = new DisplayImageOptions.Builder()
+				.showImageOnLoading(R.drawable.ic_launcher)
+				.showImageForEmptyUri(R.drawable.ic_launcher)
+				.showImageOnFail(R.drawable.ic_launcher).cacheInMemory(true)
+				.cacheOnDisc(true).considerExifParams(true)
+				.bitmapConfig(Bitmap.Config.RGB_565)
+				// .displayer(new RoundedBitmapDisplayer(10))//设置圆角
+				.build();
 		inflater = LayoutInflater.from(context);
 	}
 
@@ -62,31 +70,33 @@ public class CateAdapter extends BaseAdapter {
 		if (view == null) {
 			view = inflater.inflate(R.layout.list_cate_item, null);
 			mHolder = new ViewHolder();
-			mHolder.iv_cate_item = (ImageView) view.findViewById(R.id.iv_cate_item);
+			mHolder.tv_cate_name = (TextView) view.findViewById(R.id.tv_cate_name);
+			mHolder.iv_cate_img = (ImageView) view.findViewById(R.id.iv_cate_img);
 			mHolder.iv_cate_progress = (ProgressBar) view.findViewById(R.id.iv_cate_progress);
 			view.setTag(mHolder);
 		} else {
 			mHolder = (ViewHolder) view.getTag();
 		}
 		CateEntity category = getItem(position);
-		imageLoader.displayImage(category.getImg_url(), mHolder.iv_cate_item, options, new ImageLoadingListener() {
+		mHolder.tv_cate_name.setText(category.getName());
+		imageLoader.displayImage(category.getImg_url(), mHolder.iv_cate_img, options, new ImageLoadingListener() {
 			
 			@Override
 			public void onLoadingStarted(String imageUri, View view) {
-				mHolder.iv_cate_item.setVisibility(View.GONE);
+				mHolder.iv_cate_img.setVisibility(View.INVISIBLE);
 				mHolder.iv_cate_progress.setVisibility(View.VISIBLE);
 			}
 			
 			@Override
 			public void onLoadingFailed(String imageUri, View view,
 					FailReason failReason) {
-				mHolder.iv_cate_item.setVisibility(View.GONE);
+				mHolder.iv_cate_img.setVisibility(View.INVISIBLE);
 				mHolder.iv_cate_progress.setVisibility(View.GONE);
 			}
 			
 			@Override
 			public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-				mHolder.iv_cate_item.setVisibility(View.VISIBLE);
+				mHolder.iv_cate_img.setVisibility(View.VISIBLE);
 				mHolder.iv_cate_progress.setVisibility(View.GONE);
 			}
 			
@@ -99,7 +109,8 @@ public class CateAdapter extends BaseAdapter {
 	}
 
 	class ViewHolder {
-		ImageView iv_cate_item;
+		TextView tv_cate_name;
+		ImageView iv_cate_img;
 		ProgressBar iv_cate_progress;
 	}
 }
