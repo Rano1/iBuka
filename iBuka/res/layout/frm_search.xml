@@ -1,23 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="search" />
+    <RelativeLayout
+        android:id="@+id/sTopbar"
+        style="@style/topbar" >
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="fill_parent"
+            android:layout_height="34.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:background="@drawable/search_text_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:hint="@string/searchTips"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="30.0dip"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@color/listTitle"
+            android:textColorHint="#ffcccccc"
+            android:textCursorDrawable="@null"
+            android:textSize="15.0sp" />
+
+        <ImageView
+            android:id="@+id/iv_searchBtn"
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@drawable/icon_tab_search" />
+
+        <ImageView
+            android:id="@+id/iv_searchClearBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/edt_search"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-83.0dip"
+            android:layout_marginRight="5.0dip"
+            android:src="@drawable/search_clear_btn"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- <cn.ibuka.manga.ui.ViewCategory -->
 
     <GridView
-        android:id="@+id/searchRecomGrid"
+        android:id="@+id/grid_cate"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginTop="10.0dip"
         android:cacheColorHint="#00000000"
-        android:columnWidth="83.0dip"
         android:fadingEdge="none"
         android:listSelector="#00000000"
-        android:numColumns="auto_fit" />
+        android:numColumns="3" />
 
 </LinearLayout>

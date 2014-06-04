@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import com.buka.R;
 import com.buka.base.BaseFragment;
 /**
- * 游戏中心
+ * 娓告垙涓績
  */
 public class RecomGamescenter extends BaseFragment {
 	@Override

@@ -10,7 +10,7 @@ import com.buka.R;
 import com.buka.base.BaseFragment;
 
 /**
- * ×î½ü¸üÐÂ
+ * æœ€è¿‘æ›´æ–°
  */
 public class RecomRecent extends BaseFragment {
 	@Override

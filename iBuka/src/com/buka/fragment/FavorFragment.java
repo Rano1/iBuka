@@ -92,7 +92,7 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 				}
 			}
 		});
-		//³õÊ¼»¯ViewPager
+		//åˆå§‹åŒ–ViewPager
 		mAdapter = new PagerAdapter(fm, fragmentList);
 		viewpager_favor.setAdapter(mAdapter);
 		viewpager_favor.setOnPageChangeListener(new OnPageChangeListener() {

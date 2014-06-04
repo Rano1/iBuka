@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import com.buka.R;
 import com.buka.base.BaseFragment;
 /**
- * ÈÈÃÅÁ¬ÔØ
+ * çƒ­é—¨è¿è½½
  */
 public class RecomHot extends BaseFragment {
 	@Override

@@ -145,7 +145,7 @@ public class RecomFragment extends BaseFragment {
 	}
 
 	private void check_change(RadioButton rbtn, ImageView img) {
-		// ≥ı ºªØ
+		// ÂàùÂßãÂåñ
 		rbtn_recom_recommend.setTextColor(getResources().getColor(R.drawable.bar_btn_text_color));
 		rbtn_recom_hot.setTextColor(getResources().getColor(R.drawable.bar_btn_text_color));
 		rbtn_recom_gamescenter.setTextColor(getResources().getColor(R.drawable.bar_btn_text_color));
@@ -154,7 +154,7 @@ public class RecomFragment extends BaseFragment {
 		view_recom_hot_divide.setVisibility(View.INVISIBLE);
 		view_recom_gamescenter_divide.setVisibility(View.INVISIBLE);
 		view_recom_recent_divide.setVisibility(View.INVISIBLE);
-		// µ„ª˜µƒ
+		// ÁÇπÂáªÁöÑ
 		rbtn.setTextColor(getResources().getColor(R.drawable.bar_btn_text_color_emph));
 		img.setVisibility(View.VISIBLE);
 	}

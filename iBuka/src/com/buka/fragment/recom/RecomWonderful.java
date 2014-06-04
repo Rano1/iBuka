@@ -9,7 +9,7 @@ import com.buka.R;
 import com.buka.base.BaseFragment;
 
 /**
- * ¾«²ÊÍÆ¼ö
+ * ç²¾å½©æ¨è
  */
 public class RecomWonderful extends BaseFragment {
 	@Override

@@ -6,7 +6,6 @@ import com.buka.fragment.RecomFragment;
 import com.buka.fragment.SearchFragment;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
@@ -35,16 +34,16 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 	}
 
 	private void initView() {
-		//³õÊ¼»¯¿é¹ÜÀí
+		//åˆå§‹åŒ–å—ç®¡ç†
 		fm = getSupportFragmentManager();
-		//³õÊ¼»¯TabHost
+		//åˆå§‹åŒ–TabHost
 		mTabHost = (FragmentTabHost)findViewById(android.R.id.tabhost);
 		mTabHost.setup(this, fm, android.R.id.tabcontent);
 		mTabHost.addTab(mTabHost.newTabSpec(TAG_FAVOR).setIndicator(TAG_FAVOR),FavorFragment.class,null);
 		mTabHost.addTab(mTabHost.newTabSpec(TAG_RECOM).setIndicator(TAG_RECOM),RecomFragment.class,null);
 		mTabHost.addTab(mTabHost.newTabSpec(TAG_SEARCH).setIndicator(TAG_SEARCH),SearchFragment.class,null);
 		mTabHost.addTab(mTabHost.newTabSpec(TAG_MORE).setIndicator(TAG_MORE),MoreFragment.class,null);
-		//³õÊ¼»¯ÆäËû¿Ø¼ş
+		//åˆå§‹åŒ–å…¶ä»–æ§ä»¶
 		tab_btn_favor = (ImageView)findViewById(R.id.tab_btn_favor);
 		tab_btn_recom = (ImageView)findViewById(R.id.tab_btn_recom);
 		tab_btn_search = (ImageView)findViewById(R.id.tab_btn_search);
@@ -53,7 +52,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		tab_btn_recom.setOnClickListener(this);
 		tab_btn_search.setOnClickListener(this);
 		tab_btn_more.setOnClickListener(this);
-		//³õÊ¼»¯Ñ¡ÖĞ×´Ì¬
+		//åˆå§‹åŒ–é€‰ä¸­çŠ¶æ€
 		checkTab(TAG_RECOM , tab_btn_recom);
 	}
 	
@@ -85,7 +84,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		}
 	}
 
-	/** ¸Ä±äËµµã»÷µÄ°´Å¥µÄ×´Ì¬ */
+	/** æ”¹å˜è¯´ç‚¹å‡»çš„æŒ‰é’®çš„çŠ¶æ€ */
 	public void checkTab(String tag , ImageView check){
 //		mTabHost.onTabChanged(tag);
 		mTabHost.setCurrentTabByTag(tag);
