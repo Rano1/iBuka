@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top_bar"
+        style="@style/topbar" >
+
+        <ImageView
+            android:id="@+id/bt_back"
+            style="@style/topbar_back_btn" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/aboutTitle"
+            android:textColor="@color/listTitle"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_top_bar"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_logo_about"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_marginTop="66.0dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon" />
+
+            <TextView
+                android:id="@+id/tv_version_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="1.7.21"
+                android:textColor="@color/listTitle"
+                android:textSize="13.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="66.0dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_site_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_top"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip"
+                    android:singleLine="true"
+                    android:text="@string/aboutSite2"
+                    android:textColor="@color/listTitle"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_coop_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_center"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip"
+                    android:singleLine="true"
+                    android:text="@string/aboutCoop2"
+                    android:textColor="@color/listTitle"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_bbs_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_center"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip"
+                    android:singleLine="true"
+                    android:text="@string/aboutBBS2"
+                    android:textColor="@color/listTitle"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_join_us_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_bottom"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip"
+                    android:singleLine="true"
+                    android:text="@string/aboutJoinUs2"
+                    android:textColor="@color/listTitle"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_weibo_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_top"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip"
+                    android:singleLine="true"
+                    android:text="@string/aboutWeibo2"
+                    android:textColor="@color/listTitle"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_weixin_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_center"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip"
+                    android:singleLine="true"
+                    android:text="@string/aboutWeixin2"
+                    android:textColor="@color/listTitle"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_qq_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_center"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip"
+                    android:singleLine="true"
+                    android:text="@string/aboutQQgroup2"
+                    android:textColor="@color/listTitle"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_qq_test_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_center"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip"
+                    android:singleLine="true"
+                    android:text="@string/aboutQQTestgroup2"
+                    android:textColor="@color/listTitle"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_facebook_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/bg_item_bottom"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="15.0dip"
+                    android:singleLine="true"
+                    android:text="@string/aboutFacebook2"
+                    android:textColor="@color/listTitle"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_copyright_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="60.0dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/aboutCopyrightStatement"
+                android:textColor="@color/listTitle"
+                android:textSize="13.0sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        style="@style/shadow_top"
+        android:layout_below="@id/layout_top_bar" />
+
+    <ImageView
+        style="@style/shadow_bottom"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

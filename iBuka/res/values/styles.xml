@@ -470,4 +470,23 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
+    
+     <style name="topbar_back">
+        <item name="android:src">@drawable/icon_back</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:onClick">return_Back</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="topbar_title">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/listTitle</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>

@@ -22,6 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.buka.ComicDirActivity;
 import com.buka.R;
 import com.buka.entity.RecomComic;
 import com.buka.tools.BaseTools;
@@ -190,9 +191,9 @@ public class WaterfallAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-//				Intent intent = new Intent(context, ComicDirActivity.class);
-//				intent.putExtra("comic_id", recomcomic.getId());
-//				context.startActivity(intent);
+				Intent intent = new Intent(context, ComicDirActivity.class);
+				intent.putExtra("comic_id", recomcomic.getId());
+				context.startActivity(intent);
 			}
 		});
 		return view;

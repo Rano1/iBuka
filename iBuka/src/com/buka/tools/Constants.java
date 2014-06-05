@@ -18,16 +18,17 @@ public class Constants {
 	}
 
 	public static final String[] IMAGES_CATE = new String[] {
-			"http://img0.imgtn.bdimg.com/it/u=3529685384,1707880994&fm=21&gp=0.jpg",
-			"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-			"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-			"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-			"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-			"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-			"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-			"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-			"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg",
-			"http://img1.imgtn.bdimg.com/it/u=2398049347,2383359376&fm=116&gp=0.jpg" };
+		"http://t1.baidu.com/it/u=1038806409,3412540273&fm=21&gp=0.jpg",
+		"http://t10.baidu.com/it/u=50697511,3492324182&fm=21&gp=0.jpg",
+		"http://t11.baidu.com/it/u=4261091401,2809499977&fm=23&gp=0.jpg",
+		"http://t2.baidu.com/it/u=664664776,2474321331&fm=21&gp=0.jpg",
+		"http://t2.baidu.com/it/u=2000984254,671030445&fm=21&gp=0.jpg",
+		"http://t12.baidu.com/it/u=1000694325,536197580&fm=21&gp=0.jpg",
+		"http://t3.baidu.com/it/u=2877325771,2951626559&fm=21&gp=0.jpg",
+		"http://t2.baidu.com/it/u=4217487879,1939311980&fm=21&gp=0.jpg",
+		"http://t11.baidu.com/it/u=2154075125,3961488333&fm=21&gp=0.jpg",
+		"http://t11.baidu.com/it/u=111124280,2109575648&fm=21&gp=0.jpg",
+		"http://t11.baidu.com/it/u=1256943453,3366981119&fm=23&gp=0.jpg", };
 
 	public static final String[] IMAGES_FAVOR_COLLECT = new String[] {
 			"http://t1.baidu.com/it/u=3061284966,2756044882&fm=23&gp=0.jpg",
