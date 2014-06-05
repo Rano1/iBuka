@@ -26,6 +26,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ComicDirActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".FeedBackActivity" />
         <activity android:name=".AboutActivity" />
     </application>
 

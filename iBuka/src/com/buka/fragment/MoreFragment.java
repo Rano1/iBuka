@@ -9,11 +9,15 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.buka.AboutActivity;
+import com.buka.FeedBackActivity;
+import com.buka.LoginActivity;
 import com.buka.R;
 import com.buka.base.BaseFragment;
 
 public class MoreFragment extends BaseFragment implements OnClickListener{
 	View view;
+	LinearLayout layout_feedback_more;
+	LinearLayout layout_user_center_more;
 	LinearLayout layout_about_more;
 	
 	@Override
@@ -31,7 +35,11 @@ public class MoreFragment extends BaseFragment implements OnClickListener{
 	}
 
 	private void initView() {
+		layout_feedback_more = (LinearLayout) view.findViewById(R.id.layout_feedback_more);
+		layout_user_center_more = (LinearLayout) view.findViewById(R.id.layout_user_center_more);
 		layout_about_more = (LinearLayout) view.findViewById(R.id.layout_about_more);
+		layout_feedback_more.setOnClickListener(this);
+		layout_user_center_more.setOnClickListener(this);
 		layout_about_more.setOnClickListener(this);
 	}
 
@@ -50,6 +58,12 @@ public class MoreFragment extends BaseFragment implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
+		case R.id.layout_feedback_more:
+			activity.startActivity(new Intent(activity,FeedBackActivity.class));
+			break;
+		case R.id.layout_user_center_more:
+			activity.startActivity(new Intent(activity,LoginActivity.class));
+			break;
 		case R.id.layout_about_more:
 			activity.startActivity(new Intent(activity,AboutActivity.class));
 			break;
