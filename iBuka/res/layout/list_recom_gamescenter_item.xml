@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:descendantFocusability="blocksDescendants" >
+
+        <ImageView
+            android:id="@+id/recom_gamescenter_item_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY" />
+
+        <ProgressBar
+            android:id="@+id/recom_gamescenter_item_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="100" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/logo_mask_btn"
+            android:clickable="false" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/recom_gamescenter_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="最近更新"
+        android:textColor="@color/listTitle"
+        android:textSize="13.0sp" />
+
+</LinearLayout>

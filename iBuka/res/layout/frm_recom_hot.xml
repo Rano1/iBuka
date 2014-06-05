@@ -4,9 +4,82 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
+    <ScrollView
+        android:id="@+id/scrolview_recom_hot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="hot" />
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="180dip"
+                android:descendantFocusability="blocksDescendants" >
+
+                <ImageView
+                    android:id="@+id/recom_hot_head_img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/hot_head_img" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/recom_header_text_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="美食俘虏"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="妖精的尾巴"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:text="恶魔奶爸"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/logo_mask_btn"
+                    android:clickable="true" />
+            </RelativeLayout>
+
+            <com.buka.view.CategoryView
+                android:id="@+id/recom_hot_cate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:listSelector="#00000000"
+                android:numColumns="2" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

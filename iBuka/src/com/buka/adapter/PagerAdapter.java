@@ -8,7 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.ViewGroup;
-
+/**
+ * ViewPager对应的Fragment的适配器
+ */
 public class PagerAdapter extends FragmentPagerAdapter {
 	ArrayList<Fragment> frmList;
 

@@ -31,6 +31,9 @@ import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
+/**
+ * 瀑布流对应的适配器
+ */
 public class WaterfallAdapter extends BaseAdapter {
 
 	ArrayList<RecomComic> comicList;

@@ -26,7 +26,9 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ * 收藏、下载对应的适配器
+ */
 public class FavorAdapter extends BaseAdapter {
 	private ArrayList<FavorCollectList> favorcollectlist;
 	private Activity activity;
