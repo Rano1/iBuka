@@ -4,9 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
+    <ListView
+        android:id="@+id/recom_recent_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="recent" />
+        android:cacheColorHint="@android:color/transparent"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/more_item" >
+    </ListView>
 
 </LinearLayout>

@@ -4,46 +4,63 @@
     android:layout_height="fill_parent"
     android:background="@drawable/bg" >
 
-<!--     <RelativeLayout style="@style/topbar" > -->
+    <!-- <RelativeLayout style="@style/topbar" > -->
 
-<!--         <ImageView -->
-<!--             android:id="@+id/backupBack" -->
-<!--             style="@style/topbar_back_btn" /> -->
 
-<!--         <TextView -->
-<!--             android:layout_width="fill_parent" -->
-<!--             android:layout_height="fill_parent" -->
-<!--             android:gravity="center" -->
-<!--             android:text="@string/favbackup" -->
-<!--             android:textColor="@color/listTitle" -->
-<!--             android:textSize="16.0sp" /> -->
-<!--     </RelativeLayout> -->
+    <!-- <ImageView -->
+    <!-- android:id="@+id/backupBack" -->
+    <!-- style="@style/topbar_back_btn" /> -->
 
-<!--     <ListView -->
-<!--         android:id="@+id/buckupList" -->
-<!--         android:layout_width="fill_parent" -->
-<!--         android:layout_height="fill_parent" -->
-<!--         android:layout_marginTop="48.0dip" -->
-<!--         android:cacheColorHint="#00000000" -->
-<!--         android:divider="@drawable/list_line" -->
-<!--         android:fadingEdge="none" -->
-<!--         android:listSelector="#00000000" -->
-<!--         android:scrollingCache="false" /> -->
 
-<!--     <include layout="@layout/viewdownloadstate" /> -->
+    <!-- <TextView -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="@string/favbackup" -->
+    <!-- android:textColor="@color/listTitle" -->
+    <!-- android:textSize="16.0sp" /> -->
+    <!-- </RelativeLayout> -->
 
-<!--     <ImageView -->
-<!--         style="@style/shadow_top" -->
-<!--         android:layout_marginTop="48.0dip" /> -->
 
-<!--     <ImageView -->
-<!--         style="@style/shadow_bottom" -->
-<!--         android:layout_alignParentBottom="true" /> -->
+    <!-- <ListView -->
+    <!-- android:id="@+id/buckupList" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:layout_marginTop="48.0dip" -->
+    <!-- android:cacheColorHint="#00000000" -->
+    <!-- android:divider="@drawable/list_line" -->
+    <!-- android:fadingEdge="none" -->
+    <!-- android:listSelector="#00000000" -->
+    <!-- android:scrollingCache="false" /> -->
+
+
+    <!-- <include layout="@layout/viewdownloadstate" /> -->
+
+
+    <!-- <ImageView -->
+    <!-- style="@style/shadow_top" -->
+    <!-- android:layout_marginTop="48.0dip" /> -->
+
+
+    <!-- <ImageView -->
+    <!-- style="@style/shadow_bottom" -->
+    <!-- android:layout_alignParentBottom="true" /> -->
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:text="111" />
+        android:id="@+id/favor_collect_nodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="没有收藏漫画哦！"
+        android:textColor="#C0C0C0"
+        android:textSize="12sp" />
+
+    <ListView
+        android:id="@+id/favor_collect_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@drawable/more_item" >
+    </ListView>
 
 </RelativeLayout>

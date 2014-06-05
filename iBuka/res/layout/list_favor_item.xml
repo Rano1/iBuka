@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/more_item"
+    android:drawingCacheQuality="high"
+    android:padding="10dip"
+    android:clickable="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="50.0dip"
+            android:layout_height="66.0dip" >
+
+            <ImageView
+                android:id="@+id/favor_image"
+                android:layout_width="50.0dip"
+                android:layout_height="66.0dip"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="50.0dip"
+                android:layout_height="66.0dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/logo_br" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="2dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/favor_item_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="火影忍者"
+                android:textColor="#ff3a3a3a"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="看到第"
+                    android:textColor="@color/text"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/favor_item_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="220话"
+                    android:textColor="@color/text"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/button_favor_item_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:src="@drawable/his_item_button" />
+
+</RelativeLayout>
