@@ -108,4 +108,9 @@ public class Constants {
 		R.drawable.l1020, R.drawable.l1021, R.drawable.l1022,
 		R.drawable.l1023, R.drawable.l1024, R.drawable.l1025,
 		R.drawable.l1026, R.drawable.l1027, };
+	
+	/** 收藏对应的typeId */
+	public final static int FAVOR_COLLECT = 0;
+	/** 历史对应的typeId */
+	public final static int FAVOR_HISTORY = 1;
 }

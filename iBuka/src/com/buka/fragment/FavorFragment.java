@@ -24,6 +24,7 @@ import com.buka.R;
 import com.buka.adapter.PagerAdapter;
 import com.buka.base.BaseFragment;
 import com.buka.fragment.favor.FavorCollect;
+import com.buka.tools.Constants;
 
 public class FavorFragment extends BaseFragment implements OnClickListener{
 	PagerAdapter mAdapter;
@@ -35,7 +36,7 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 	private ImageView view_favor_history_divide;
 	FragmentManager fm;
 	private FavorCollect collectFragment;
-	private FavorCollect downloadFragment;
+	private FavorCollect historyFragment;
 	private ArrayList<Fragment> fragmentList;
 	private LinearLayout ll_login;
 	
@@ -50,9 +51,15 @@ public class FavorFragment extends BaseFragment implements OnClickListener{
 	private void initFragment() {
 		fragmentList = new ArrayList<Fragment>();
 		collectFragment = new FavorCollect();
-		downloadFragment = new FavorCollect();
+		Bundle data_collect = new Bundle();
+		data_collect.putInt("favor_type", Constants.FAVOR_COLLECT);
+    	collectFragment.setArguments(data_collect);
+		historyFragment = new FavorCollect();
+		Bundle data_history = new Bundle();
+		data_history.putInt("favor_type", Constants.FAVOR_HISTORY);
+    	historyFragment.setArguments(data_history);
 		fragmentList.add(collectFragment);
-		fragmentList.add(downloadFragment);
+		fragmentList.add(historyFragment);
 	}
 
 	@Override
