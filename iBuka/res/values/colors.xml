@@ -53,4 +53,6 @@
     <color name="simpleBg">#ff1a1a1a</color>
     <color name="umeng_fb_color_btn_pressed">#ff1495f7</color>
     <color name="umeng_fb_color_btn_normal">#ff333333</color>
+    
+    <color name="recom_headbar_yel">#aaFFFF33</color>
 </resources>

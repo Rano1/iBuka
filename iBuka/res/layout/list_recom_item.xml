@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="2dip" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:descendantFocusability="blocksDescendants" >
+
+        <ImageView
+            android:id="@+id/recom_item_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY" />
+
+        <ProgressBar
+            android:id="@+id/recom_item_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="100" />
+
+        <Button
+            android:id="@+id/btn_recom_item"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/logo_mask_btn"
+            android:clickable="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip" >
+
+        <TextView
+            android:id="@+id/recom_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="最近更新"
+            android:textColor="@color/listTitle"
+            android:textSize="13.0sp" />
+        <TextView
+            android:id="@+id/recom_item_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="100话"
+            android:textColor="#C0C0C0"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>

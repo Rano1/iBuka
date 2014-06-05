@@ -85,10 +85,8 @@ public class WaterfallAdapter extends BaseAdapter {
 			holder.pbLoad = (ProgressBar) view.findViewById(R.id.pb_load);
 			holder.recom_recommend_item_title = (TextView) view
 					.findViewById(R.id.recom_recommend_item_title);
-			holder.recom_recommend_item_section = (TextView) view
-					.findViewById(R.id.recom_recommend_item_section);
-			holder.button_item_img = (Button) view
-					.findViewById(R.id.button_item_img);
+			holder.recom_recommend_item_section = (TextView) view.findViewById(R.id.recom_recommend_item_section);
+			holder.button_item_img = (Button) view.findViewById(R.id.button_item_img);
 
 			view.setTag(holder);
 		} else {

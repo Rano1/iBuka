@@ -4,57 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <com.buka.view.ComicScrollView
-        android:id="@+id/recom_gamescenter_scrollview"
+    <com.buka.view.grid.StaggeredGridView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/grid_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fadingEdge="none" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="180dip"
-                android:descendantFocusability="blocksDescendants" >
-
-                <ImageView
-                    android:id="@+id/recom_gamescenter_head_img"
-                    android:layout_width="fill_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/gamescenter_head_img" />
-
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="30dip"
-                    android:layout_alignParentBottom="true"
-                    android:background="#aaFFFF33"
-                    android:gravity="center_vertical"
-                    android:paddingBottom="3dip"
-                    android:paddingLeft="10dip"
-                    android:paddingTop="3dip"
-                    android:text="火影忍者最强对决"
-                    android:textColor="@android:color/white" />
-
-                <Button
-                    android:layout_width="fill_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/logo_mask_btn"
-                    android:clickable="false" />
-            </RelativeLayout>
-
-            <com.buka.view.CategoryView
-                android:id="@+id/recom_gamescenter_cate"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:cacheColorHint="@android:color/transparent"
-                android:fadingEdge="none"
-                android:listSelector="@android:color/transparent"
-                android:numColumns="2" />
-        </LinearLayout>
-    </com.buka.view.ComicScrollView>
+        app:column_count="2"
+        app:item_margin="5dp" />
 
 </LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_recom_header"
+    style="@style/itemRecomHeaderBarLayout" >
+
+    <TextView
+        android:id="@+id/tv_recomHeaderTitle"
+        style="@style/itemRecomHeaderFontBase"
+        android:text="上课小动作"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/tv_recomItemHeaderText"
+        style="@style/itemRecomHeaderFontBase"
+        android:layout_alignBaseline="@id/tv_recomHeaderTitle"
+        android:layout_marginLeft="5.0dip"
+        android:layout_toRightOf="@id/tv_recomHeaderTitle"
+        android:text="背着老师的新年第一发"
+        android:textSize="12.0sp" />
+
+</RelativeLayout>

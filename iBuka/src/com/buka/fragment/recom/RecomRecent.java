@@ -90,19 +90,13 @@ public class RecomRecent extends BaseFragment {
 			View view = convertView;
 			final ViewHolder holder;
 			if (convertView == null) {
-				view = getActivity().getLayoutInflater().inflate(
-						R.layout.list_recom_recent_item, parent, false);
+				view = getActivity().getLayoutInflater().inflate(R.layout.list_recom_recent_item, parent, false);
 				holder = new ViewHolder();
-				holder.recom_recent_item_title = (TextView) view
-						.findViewById(R.id.recom_recent_item_title);
-				holder.recom_recent_item_writer = (TextView) view
-						.findViewById(R.id.recom_recent_item_writer);
-				holder.recom_recent_item_no = (TextView) view
-						.findViewById(R.id.recom_recent_item_no);
-				holder.recom_recent_item_image = (ImageView) view
-						.findViewById(R.id.recom_recent_item_image);
-				holder.recom_recent_item_ratingBar = (RatingBar) view
-						.findViewById(R.id.recom_recent_item_ratingBar);
+				holder.recom_recent_item_title = (TextView) view.findViewById(R.id.recom_recent_item_title);
+				holder.recom_recent_item_writer = (TextView) view.findViewById(R.id.recom_recent_item_writer);
+				holder.recom_recent_item_no = (TextView) view.findViewById(R.id.recom_recent_item_no);
+				holder.recom_recent_item_image = (ImageView) view.findViewById(R.id.recom_recent_item_image);
+				holder.recom_recent_item_ratingBar = (RatingBar) view.findViewById(R.id.recom_recent_item_ratingBar);
 				view.setTag(holder);
 			} else {
 				holder = (ViewHolder) view.getTag();

@@ -113,4 +113,8 @@ public class Constants {
 	public final static int FAVOR_COLLECT = 0;
 	/** 历史对应的typeId */
 	public final static int FAVOR_HISTORY = 1;
+	/** 热门推荐对应的typeId */
+	public final static int RECOM_HOT = 0;
+	/** 游戏中心对应的typeId */
+	public final static int RECOM_GAME = 1;
 }
