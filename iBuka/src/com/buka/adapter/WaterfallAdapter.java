@@ -24,7 +24,7 @@ import android.widget.Toast;
 
 import com.buka.ComicDirActivity;
 import com.buka.R;
-import com.buka.entity.RecomComic;
+import com.buka.entity.ComicEntity;
 import com.buka.tools.BaseTools;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -37,13 +37,13 @@ import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
  */
 public class WaterfallAdapter extends BaseAdapter {
 
-	ArrayList<RecomComic> comicList;
+	ArrayList<ComicEntity> comicList;
 	Context context;
 	private Drawable drawable;
 	private int width_interval = (6 + 1) * 2;
 	DisplayImageOptions options;
 
-	public WaterfallAdapter(ArrayList<RecomComic> comicList, Context context) {
+	public WaterfallAdapter(Context context, ArrayList<ComicEntity> comicList) {
 		this.comicList = comicList;
 		this.context = context;
 		drawable = context.getResources().getDrawable(R.drawable.ic_launcher);
@@ -62,7 +62,7 @@ public class WaterfallAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public RecomComic getItem(int arg0) {
+	public ComicEntity getItem(int arg0) {
 		if (comicList != null && comicList.size() != 0) {
 			return comicList.get(arg0);
 		}
@@ -86,15 +86,17 @@ public class WaterfallAdapter extends BaseAdapter {
 			holder.pbLoad = (ProgressBar) view.findViewById(R.id.pb_load);
 			holder.recom_recommend_item_title = (TextView) view
 					.findViewById(R.id.recom_recommend_item_title);
-			holder.recom_recommend_item_section = (TextView) view.findViewById(R.id.recom_recommend_item_section);
-			holder.button_item_img = (Button) view.findViewById(R.id.button_item_img);
+			holder.recom_recommend_item_section = (TextView) view
+					.findViewById(R.id.recom_recommend_item_section);
+			holder.button_item_img = (Button) view
+					.findViewById(R.id.button_item_img);
 
 			view.setTag(holder);
 		} else {
 			holder = (Holder) view.getTag();
 		}
-		final RecomComic recomcomic = getItem(position);
-		String url = recomcomic.getImg_url();
+		final ComicEntity recomcomic = getItem(position);
+		String url = recomcomic.getCover_url();
 		ImageLoader.getInstance().displayImage(url, holder.ivIcon, options,
 				new ImageLoadingListener() {
 
@@ -115,8 +117,8 @@ public class WaterfallAdapter extends BaseAdapter {
 						float hscale = dHeight / 2.0f;
 						lp.width = (int) (wscale);
 						lp.height = (int) (Float.valueOf(recomcomic
-								.getImg_height()) * wscale / Float
-								.valueOf(recomcomic.getImg_width()));
+								.getCover_height()) * wscale / Float
+								.valueOf(recomcomic.getCover_width()));
 						// lp.height = (int) (wscale);
 						// lp.width = (int) (hscale);
 						holder.ivIcon.setLayoutParams(lp);
@@ -176,8 +178,8 @@ public class WaterfallAdapter extends BaseAdapter {
 					}
 				});
 
-		holder.recom_recommend_item_title.setText(recomcomic.getTitle());
-		holder.recom_recommend_item_section.setText(recomcomic.getSection());
+		holder.recom_recommend_item_title.setText(recomcomic.getMname());
+		holder.recom_recommend_item_section.setText(recomcomic.getChapter() + "章");
 		holder.ivIcon.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -192,19 +194,18 @@ public class WaterfallAdapter extends BaseAdapter {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(context, ComicDirActivity.class);
-				intent.putExtra("comic_id", recomcomic.getId());
+				intent.putExtra("comic_id", recomcomic.getMid());
 				context.startActivity(intent);
 			}
 		});
 		return view;
 	}
 
-}
-
-class Holder {
-	public ImageView ivIcon;
-	public ProgressBar pbLoad;
-	public TextView recom_recommend_item_title;
-	public TextView recom_recommend_item_section;
-	public Button button_item_img;
+	class Holder {
+		public ImageView ivIcon;
+		public ProgressBar pbLoad;
+		public TextView recom_recommend_item_title;
+		public TextView recom_recommend_item_section;
+		public Button button_item_img;
+	}
 }

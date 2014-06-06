@@ -16,7 +16,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import com.buka.R;
 import com.buka.adapter.WaterfallAdapter;
 import com.buka.base.BaseFragment;
-import com.buka.entity.RecomComic;
+import com.buka.entity.ComicEntity;
 import com.buka.tools.Constants;
 import com.buka.view.grid.StaggeredGridView;
 
@@ -28,7 +28,7 @@ public class RecomWonderful extends BaseFragment {
 	View view;
 	public StaggeredGridView grid_view;
 	public WaterfallAdapter mAdapter;
-	ArrayList<RecomComic> comicList;
+	ArrayList<ComicEntity> comicList;
 	/** 判断是否在请求刷新更多 */
     private boolean mHasRequestedMore = false;
     
@@ -36,15 +36,15 @@ public class RecomWonderful extends BaseFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		comicList = new ArrayList<RecomComic>();
+		comicList = new ArrayList<ComicEntity>();
 		for (int i = 0; i < Constants.IMAGES_COMIC_RECOM.length; i++) {
-			RecomComic recomcomic = new RecomComic();
-			recomcomic.setId(i);
-			recomcomic.setTitle("火影忍者" + i);
-			recomcomic.setSection(i + "卷");
-			recomcomic.setImg_url(Constants.IMAGES_COMIC_RECOM[i]);
-			recomcomic.setImg_width(300);
-			recomcomic.setImg_height(200 + 10 * i);
+			ComicEntity recomcomic = new ComicEntity();
+			recomcomic.setMid(i);
+			recomcomic.setMname("火影忍者" + i);
+			recomcomic.setChapter(i);
+			recomcomic.setCover_url(Constants.IMAGES_COMIC_RECOM[i]);
+			recomcomic.setCover_width(300);
+			recomcomic.setCover_height(200 + 10 * i);
 			comicList.add(recomcomic);
 		}
 	}
@@ -58,7 +58,7 @@ public class RecomWonderful extends BaseFragment {
 		View footerView = getActivity().getLayoutInflater().inflate(R.layout.view_grid_footer, null);
 		grid_view.addHeaderView(headerView);
 		grid_view.addFooterView(footerView);
-		mAdapter = new WaterfallAdapter(comicList, activity);
+		mAdapter = new WaterfallAdapter(activity , comicList);
 		grid_view.setAdapter(mAdapter);
 		//设置滑动监听
 		grid_view.setOnScrollListener(new OnScrollListener() {
