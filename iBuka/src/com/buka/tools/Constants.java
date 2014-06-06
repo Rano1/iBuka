@@ -2,11 +2,44 @@ package com.buka.tools;
 
 import java.util.ArrayList;
 
+import android.content.Context;
+import android.database.Cursor;
+
 import com.buka.R;
+import com.buka.db.DBHelper;
+import com.buka.db.DBUtil;
 import com.buka.entity.CateEntity;
+import com.buka.entity.ComicEntity;
 
 public class Constants {
-
+	//
+	/** 　漫画ID */
+	public final static String MID =  "mid";
+	/** 　漫画NAME */
+	public final static String MNAME = "mname";
+	/** 　章节ID */
+	public final static String CID = "cid";
+	/** 　章节NAME */
+	public final static String CNAME = "cname";
+	/** 　章节号 */
+	public final static String CHAPTER = "chapter";
+	/** 　是否是推荐的 */
+	public final static String ISRECOM = "isrecom";
+	/** 　是否是热门的 */
+	public final static String ISHOT = "ishot";
+	/** 　漫画封面对应的URL */
+	public final static String COVER_URL = "cover_url";
+	/** 　最后更新时间 */
+	public final static String LASTUPTIME = "lastuptime";
+	/** 　大分类 */
+	public final static String CATE = "cate";
+	/** 　阅读时间 */
+	public final static String READTIME = "readtime";
+	/** 　封面宽度 */
+	public final static String COVER_WIDTH = "cover_width";
+	/** 　封面高度 */
+	public final static String COVER_HEIGHT = "cover_height";
+	
 	public static ArrayList<CateEntity> getCateList() {
 		ArrayList<CateEntity> list = new ArrayList<CateEntity>();
 		for (int i = 0; i < IMAGES_CATE.length; i++) {
@@ -118,4 +151,28 @@ public class Constants {
 	public final static int RECOM_HOT = 0;
 	/** 游戏中心对应的typeId */
 	public final static int RECOM_GAME = 1;
+	
+	/**
+	 * 获取精彩推荐
+	 */
+	public static ArrayList<ComicEntity> getRecom(Context context){
+		ArrayList<ComicEntity> comicList = new ArrayList<ComicEntity>();
+		Cursor cursor = null;
+		cursor = DBUtil.getInstance(context, DBHelper.TABLE_COMIC).selectData(null, null, null, null, null, null);
+		int i = 0;
+		while(cursor.moveToNext()){
+			ComicEntity comic = new ComicEntity();
+			comic.setMid(cursor.getInt(cursor.getColumnIndex(Constants.MID)));
+			comic.setMname(cursor.getString(cursor.getColumnIndex(Constants.MNAME)));
+			comic.setCid(cursor.getInt(cursor.getColumnIndex(Constants.CID)));
+			comic.setCname(cursor.getString(cursor.getColumnIndex(Constants.CNAME)));
+			comic.setChapter(cursor.getInt(cursor.getColumnIndex(Constants.CHAPTER)));
+			comic.setCover_url(cursor.getString(cursor.getColumnIndex(Constants.COVER_URL)));
+			comic.setCover_width(300 );
+			comic.setCover_height(200 + 10 * i);
+			comicList.add(comic);
+			i++;
+		}
+		return comicList;
+	}
 }

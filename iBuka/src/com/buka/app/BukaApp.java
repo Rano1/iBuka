@@ -1,7 +1,9 @@
 package com.buka.app;
 
 import java.io.File;
+import java.io.IOException;
 
+import com.buka.db.DBHelper;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -22,6 +24,18 @@ public class BukaApp extends Application {
 		super.onCreate();
 		initImageLoader(getApplicationContext());
 		mBukaApp = this;
+		initDB();
+	}
+
+	private void initDB() {
+		DBHelper dbHelper = new DBHelper(getApplicationContext());
+		try {
+			dbHelper.createDataBase();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		dbHelper.close();
 	}
 
 	public static BukaApp getApp() {

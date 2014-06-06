@@ -37,16 +37,17 @@ public class RecomWonderful extends BaseFragment {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		comicList = new ArrayList<ComicEntity>();
-		for (int i = 0; i < Constants.IMAGES_COMIC_RECOM.length; i++) {
-			ComicEntity recomcomic = new ComicEntity();
-			recomcomic.setMid(i);
-			recomcomic.setMname("火影忍者" + i);
-			recomcomic.setChapter(i);
-			recomcomic.setCover_url(Constants.IMAGES_COMIC_RECOM[i]);
-			recomcomic.setCover_width(300);
-			recomcomic.setCover_height(200 + 10 * i);
-			comicList.add(recomcomic);
-		}
+//		for (int i = 0; i < Constants.IMAGES_COMIC_RECOM.length; i++) {
+//			ComicEntity recomcomic = new ComicEntity();
+//			recomcomic.setMid(i);
+//			recomcomic.setMname("火影忍者" + i);
+//			recomcomic.setChapter(i);
+//			recomcomic.setCover_url(Constants.IMAGES_COMIC_RECOM[i]);
+//			recomcomic.setCover_width(300);
+//			recomcomic.setCover_height(200 + 10 * i);
+//			comicList.add(recomcomic);
+//		}
+		comicList = Constants.getRecom(activity);
 	}
 
 	@Override
@@ -77,7 +78,7 @@ public class RecomWonderful extends BaseFragment {
 		            int lastInScreen = firstVisibleItem + visibleItemCount;
 		            if (lastInScreen >= totalItemCount) {
 		                mHasRequestedMore = true;
-		                loadMore();
+//		                loadMore();
 		                Log.d(TAG, "last");
 		            }
 		        }
