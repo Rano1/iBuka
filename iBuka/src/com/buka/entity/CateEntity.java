@@ -12,24 +12,15 @@ public class CateEntity implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public String id;
+	public Integer id;
 	public String name;
 	public String img_url;
 
-	public CateEntity(String id, String name, String img_url) {
-		this.id = id;
-		this.name = name;
-		this.img_url = img_url;
-	}
-
-	public CateEntity() {
-	}
-
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

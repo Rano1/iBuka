@@ -86,7 +86,7 @@ public class SearchFragment extends BaseFragment implements OnClickListener{
 	}
 
 	public void setGridView() {
-		cateList = Constants.getCateList();
+		cateList = Constants.getCate(activity);
 		mCateAdapter = new CateAdapter(activity, cateList);
 		grid_cate.setAdapter(mCateAdapter);
 	}

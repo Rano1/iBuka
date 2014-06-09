@@ -26,6 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	private static String DB_NAME = "database.db";
 	private static String ASSETS_NAME = "database.db";
 	public final static String TABLE_COMIC = "comic";
+	public final static String TABLE_CATE = "cate";
 	private SQLiteDatabase myDataBase = null;
 	private final Context myContext;
 

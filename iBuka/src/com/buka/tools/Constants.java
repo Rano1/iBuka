@@ -13,6 +13,7 @@ import com.buka.entity.ComicEntity;
 
 public class Constants {
 	//
+	public final static String IMG_URL =  "img_url";
 	/** 　漫画ID */
 	public final static String MID =  "mid";
 	/** 　漫画NAME */
@@ -40,15 +41,15 @@ public class Constants {
 	/** 　封面高度 */
 	public final static String COVER_HEIGHT = "cover_height";
 	
-	public static ArrayList<CateEntity> getCateList() {
-		ArrayList<CateEntity> list = new ArrayList<CateEntity>();
-		for (int i = 0; i < IMAGES_CATE.length; i++) {
-			CateEntity cate1 = new CateEntity("" + i, "title" + i,
-					IMAGES_CATE[i]);
-			list.add(cate1);
-		}
-		return list;
-	}
+//	public static ArrayList<CateEntity> getCateList() {
+//		ArrayList<CateEntity> list = new ArrayList<CateEntity>();
+//		for (int i = 0; i < IMAGES_CATE.length; i++) {
+//			CateEntity cate1 = new CateEntity("" + i, "title" + i,
+//					IMAGES_CATE[i]);
+//			list.add(cate1);
+//		}
+//		return list;
+//	}
 
 	public static final String[] IMAGES_CATE = new String[] {
 		"http://t1.baidu.com/it/u=1038806409,3412540273&fm=21&gp=0.jpg",
@@ -174,5 +175,22 @@ public class Constants {
 			i++;
 		}
 		return comicList;
+	}
+	
+	/**
+	 * 获取搜索栏目分类
+	 */
+	public static ArrayList<CateEntity> getCate(Context context){
+		ArrayList<CateEntity> list = new ArrayList<CateEntity>();
+		Cursor cursor = null;
+		cursor = DBUtil.getInstance(context, DBHelper.TABLE_CATE).selectData(null, null, null, null, null, null);
+		while(cursor.moveToNext()){
+			CateEntity cate = new CateEntity();
+			cate.setId(cursor.getInt(cursor.getColumnIndex(Constants.CID)));
+			cate.setName(cursor.getString(cursor.getColumnIndex(Constants.CNAME)));
+			cate.setImg_url(cursor.getString(cursor.getColumnIndex(Constants.IMG_URL)));
+			list.add(cate);
+		}
+		return list;
 	}
 }
