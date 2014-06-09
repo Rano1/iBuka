@@ -33,6 +33,16 @@ public class ComicEntity implements Serializable {
 	public Integer cate;
 	/** 　阅读时间 */
 	public String readtime;
+	/** 　作者 */
+	public String author;
+	/** 　描述 */
+	public String describe;
+	/** 　战斗力 */
+	public Integer fighting;
+	/** 　评分 */
+	public Float score;
+	/** 　吐槽数量 */
+	public Integer comments;
 	/** 　封面宽度 */
 	public Integer cover_width;
 	/** 　封面高度 */
@@ -140,6 +150,46 @@ public class ComicEntity implements Serializable {
 
 	public void setCover_height(Integer cover_height) {
 		this.cover_height = cover_height;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getDescribe() {
+		return describe;
+	}
+
+	public void setDescribe(String describe) {
+		this.describe = describe;
+	}
+
+	public Integer getFighting() {
+		return fighting;
+	}
+
+	public void setFighting(Integer fighting) {
+		this.fighting = fighting;
+	}
+
+	public Float getScore() {
+		return score;
+	}
+
+	public void setScore(Float score) {
+		this.score = score;
+	}
+
+	public Integer getComments() {
+		return comments;
+	}
+
+	public void setComments(Integer comments) {
+		this.comments = comments;
 	}
 
 }

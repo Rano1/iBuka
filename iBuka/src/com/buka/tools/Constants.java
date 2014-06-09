@@ -34,6 +34,16 @@ public class Constants {
 	public final static String LASTUPTIME = "lastuptime";
 	/** 　大分类 */
 	public final static String CATE = "cate";
+	/** 　作者*/
+	public final static String AUTHOR = "author";
+	/** 　描述*/
+	public final static String DESCRIBE = "describe";
+	/** 　战斗力 */
+	public final static String FIGHTING = "fighting";
+	/** 　评分 */
+	public final static String SCORE = "score";
+	/** 　吐槽数量 */
+	public final static String COMMENTS = "comments";
 	/** 　阅读时间 */
 	public final static String READTIME = "readtime";
 	/** 　封面宽度 */
@@ -169,6 +179,11 @@ public class Constants {
 			comic.setCname(cursor.getString(cursor.getColumnIndex(Constants.CNAME)));
 			comic.setChapter(cursor.getInt(cursor.getColumnIndex(Constants.CHAPTER)));
 			comic.setCover_url(cursor.getString(cursor.getColumnIndex(Constants.COVER_URL)));
+			comic.setAuthor(cursor.getString(cursor.getColumnIndex(Constants.AUTHOR)));
+			comic.setFighting(cursor.getInt(cursor.getColumnIndex(Constants.FIGHTING)));
+			comic.setDescribe(cursor.getString(cursor.getColumnIndex(Constants.DESCRIBE)));
+			comic.setScore(cursor.getFloat(cursor.getColumnIndex(Constants.SCORE)));
+			comic.setComments(cursor.getInt(cursor.getColumnIndex(Constants.COMMENTS)));
 			comic.setCover_width(300 );
 			comic.setCover_height(200 + 10 * i);
 			comicList.add(comic);

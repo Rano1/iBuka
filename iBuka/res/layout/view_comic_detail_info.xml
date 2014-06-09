@@ -57,7 +57,7 @@
             android:textSize="12.0sp" />
 
         <Button
-            android:id="@+id/button_comic_dir_read"
+            android:id="@+id/btn_comic_dir_read"
             android:layout_width="fill_parent"
             android:layout_height="35.0dip"
             android:layout_marginLeft="5.0dip"

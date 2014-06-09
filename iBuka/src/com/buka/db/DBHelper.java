@@ -94,7 +94,7 @@ public class DBHelper extends SQLiteOpenHelper {
 		}
 	}
 
-	// 检查数据库是否有效
+	/** 检查数据库是否有效  */
 	private boolean checkDataBase() {
 		SQLiteDatabase checkDB = null;
 		String myPath = DB_PATH + DB_NAME;

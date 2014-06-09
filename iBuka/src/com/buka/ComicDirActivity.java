@@ -23,7 +23,7 @@ public class ComicDirActivity extends BaseActivity {
 	LinearLayout layout_comic_detail_info_Desc;
 	TextView comic_detail_info_Desc;
 	Boolean detail_intr_close_status = true;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -35,37 +35,11 @@ public class ComicDirActivity extends BaseActivity {
 
 	public void initView() {
 		comic_dir_head_title = (TextView) findViewById(R.id.comic_dir_head_title);
-		button_comic_dir_read = (Button) findViewById(R.id.button_comic_dir_read);
 		// Desc
 		comic_detail_info_DescSwitcher = (ImageView) findViewById(R.id.comic_detail_info_DescSwitcher);
 		layout_comic_detail_info_Desc = (LinearLayout) findViewById(R.id.layout_comic_detail_info_Desc);
 		comic_detail_info_Desc = (TextView) findViewById(R.id.comic_detail_info_Desc);
 		comic_dir_head_title.setText(String.valueOf(comic_id));
-		button_comic_dir_read.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-//				startActivity(new Intent(getApplicationContext(),
-//						ComicReadActivity.class));
-			}
-		});
-		layout_comic_detail_info_Desc.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				if (detail_intr_close_status) {
-					comic_detail_info_DescSwitcher.setImageResource(R.drawable.detail_intr_close);
-					comic_detail_info_Desc.setMaxLines(100);
-				} else {
-					comic_detail_info_DescSwitcher
-							.setImageResource(R.drawable.detail_intr_expand);
-					comic_detail_info_Desc.setMaxLines(2);
-				}
-				detail_intr_close_status = !detail_intr_close_status;
-			}
-		});
 	}
 
 }

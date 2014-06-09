@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="horizontal"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip" >
+
+        <Button
+            android:id="@+id/chapterGridItem0"
+            style="@style/chapGridItem"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/chapterGridItem1"
+            style="@style/chapGridItem"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/chapterGridItem2"
+            style="@style/chapGridItem"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/chapterGridItem3"
+            style="@style/chapGridItem"
+            android:text="4" />
+    </LinearLayout>
+
+</LinearLayout>

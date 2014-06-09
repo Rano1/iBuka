@@ -22,7 +22,6 @@ public class AboutActivity extends BaseActivity {
 	}
 
 	public void initView() {
-		// TODO Auto-generated method stub
 		TextView tv_version_about = (TextView) findViewById(R.id.tv_version_about);
 		TextView tv_site_about = (TextView) findViewById(R.id.tv_site_about);
 		TextView tv_bbs_about = (TextView) findViewById(R.id.tv_bbs_about);
