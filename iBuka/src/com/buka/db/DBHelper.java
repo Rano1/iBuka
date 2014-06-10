@@ -19,9 +19,8 @@ public class DBHelper extends SQLiteOpenHelper {
 	// 数据库文件目标存放路径为系统默认位置，cn.arthur.examples 是你的包名
 	private static String DB_PATH = "/data/data/com.buka/databases/";
 	/*
-	 * //如果你想把数据库文件存放在SD卡的话 private static String DB_PATH =
-	 * android.os.Environment.getExternalStorageDirectory().getAbsolutePath() +
-	 * "/arthurcn/drivertest/packfiles/";
+	 *  如果你想把数据库文件存放在SD卡的话
+	 *  private static String DB_PATH = android.os.Environment.getExternalStorageDirectory().getAbsolutePath() +  "/arthurcn/drivertest/packfiles/";
 	 */
 	private static String DB_NAME = "database.db";
 	private static String ASSETS_NAME = "database.db";

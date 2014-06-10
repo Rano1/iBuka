@@ -6,6 +6,7 @@
     android:orientation="vertical" >
 
     <View
+        android:id="@+id/view_grid_footer_line"
         android:layout_width="match_parent"
         android:layout_height="1dip"
         android:background="#10000000" />

@@ -30,15 +30,18 @@ public class RecomRecent extends BaseFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		view = LayoutInflater.from(activity).inflate(R.layout.frm_recom_recent,
-				null);
+		view = LayoutInflater.from(activity).inflate(R.layout.frm_recom_recent,null);
 		initView();
 		return view;
 	}
 
 	private void initView() {
-		mAdapter = new RecentAdapter(activity, imageUrls);
 		recom_recent_listview = (ListView) view.findViewById(R.id.recom_recent_listview);
+		View footerView = getActivity().getLayoutInflater().inflate(R.layout.view_grid_footer, null);
+		View view_grid_footer_line = (View)footerView.findViewById(R.id.view_grid_footer_line);
+		view_grid_footer_line.setVisibility(View.GONE);
+		recom_recent_listview.addFooterView(footerView);
+		mAdapter = new RecentAdapter(activity, imageUrls);
 		recom_recent_listview.setAdapter(mAdapter);
 
 	}
