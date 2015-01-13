@@ -2,6 +2,7 @@ package com.buka.fragment;
 
 import java.util.ArrayList;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,7 +18,10 @@ import android.widget.ImageView;
 import com.buka.R;
 import com.buka.adapter.CateAdapter;
 import com.buka.base.BaseFragment;
+import com.buka.db.DBHelper;
+import com.buka.db.DBUtil;
 import com.buka.entity.CateEntity;
+import com.buka.entity.ComicEntity;
 import com.buka.tools.Constants;
 
 public class SearchFragment extends BaseFragment implements OnClickListener{
@@ -28,6 +32,7 @@ public class SearchFragment extends BaseFragment implements OnClickListener{
 	public ImageView iv_searchClearBtn;
 	private CateAdapter mCateAdapter;
 	private ArrayList<CateEntity> cateList;
+	private ArrayList<ComicEntity> autoList;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -76,6 +81,10 @@ public class SearchFragment extends BaseFragment implements OnClickListener{
 			public void afterTextChanged(Editable s) {
 				if (s.length() > 0) {
 					iv_searchClearBtn.setVisibility(View.VISIBLE);
+					autoList = getSearchResult(s.toString());
+					if(autoList !=null && autoList.size() !=0){
+						setAutoFillList();
+					}
 				} else {
 					iv_searchClearBtn.setVisibility(View.GONE);
 				}
@@ -85,10 +94,46 @@ public class SearchFragment extends BaseFragment implements OnClickListener{
 		return view;
 	}
 
+	/** 
+	 * 查询数据库中包含该字段的文字数据
+	 * @searchKey 关键字
+	 */
+	public ArrayList<ComicEntity> getSearchResult(String searchKey){
+		ArrayList<ComicEntity> searchList = new ArrayList<ComicEntity>();
+		Cursor cursor = DBUtil.getInstance(activity, DBHelper.TABLE_COMIC).selectData(null, null, null, null, null, null);
+		while(cursor.moveToNext()){
+			String mName = cursor.getString(cursor.getColumnIndex(Constants.MNAME));
+			if(mName.contains(searchKey)){
+				ComicEntity comic = new ComicEntity();
+				comic.setMid(cursor.getInt(cursor.getColumnIndex(Constants.MID)));
+				comic.setMname(cursor.getString(cursor.getColumnIndex(Constants.MNAME)));
+				comic.setCid(cursor.getInt(cursor.getColumnIndex(Constants.CID)));
+				comic.setCname(cursor.getString(cursor.getColumnIndex(Constants.CNAME)));
+				comic.setChapter(cursor.getInt(cursor.getColumnIndex(Constants.CHAPTER)));
+				comic.setCover_url(cursor.getString(cursor.getColumnIndex(Constants.COVER_URL)));
+				comic.setAuthor(cursor.getString(cursor.getColumnIndex(Constants.AUTHOR)));
+				comic.setFighting(cursor.getInt(cursor.getColumnIndex(Constants.FIGHTING)));
+				comic.setDescribe(cursor.getString(cursor.getColumnIndex(Constants.DESCRIBE)));
+				comic.setScore(cursor.getFloat(cursor.getColumnIndex(Constants.SCORE)));
+				comic.setComments(cursor.getInt(cursor.getColumnIndex(Constants.COMMENTS)));
+				searchList.add(comic);
+			}
+		}
+		cursor.close();
+		return searchList;
+	}
+	
 	public void setGridView() {
 		cateList = Constants.getCate(activity);
 		mCateAdapter = new CateAdapter(activity, cateList);
 		grid_cate.setAdapter(mCateAdapter);
+	}
+	
+	/**
+	 * 设置查询的数据自动填充结果
+	 */
+	public void setAutoFillList(){
+		
 	}
 	
 	@Override

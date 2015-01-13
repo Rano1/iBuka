@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewRegionTips"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c8000000"
+    android:orientation="vertical"
+    android:padding="10.0dip" 
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/landTips"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/regionText"
+            android:layout_marginBottom="10.0dip"
+            android:layout_weight="2.0"
+            android:background="#c8008463"
+            android:text="上一页" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/regionText"
+                android:layout_marginRight="5.0dip"
+                android:layout_weight="1.0"
+                android:background="#c8009245"
+                android:text="下一页" />
+
+            <TextView
+                style="@style/regionText"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_weight="1.0"
+                android:background="#c881ba47"
+                android:text="菜单"
+                android:textSize="30.0sp" />
+
+            <TextView
+                style="@style/regionText"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="1.0"
+                android:background="#c8009245"
+                android:text="下一页" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/portTips"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/regionText"
+            android:layout_weight="5.0"
+            android:background="#c8008463"
+            android:text="上一页" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="4.0"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/regionText"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="4.0"
+                android:background="#c8009245" />
+
+            <TextView
+                style="@style/regionText"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="2.0"
+                android:background="#c881ba47"
+                android:text="菜单"
+                android:textSize="30.0sp" />
+
+            <TextView
+                style="@style/regionText"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="4.0"
+                android:background="#c8009245" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/regionText"
+            android:layout_weight="5.0"
+            android:background="#c8009245"
+            android:text="下一页" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/portReverseTips"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/regionText"
+            android:layout_weight="5.0"
+            android:background="#c8009245"
+            android:text="下一页" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="4.0"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/regionText"
+                android:layout_marginBottom="5.0dip"
+                android:layout_weight="4.0"
+                android:background="#c8009245" />
+
+            <TextView
+                style="@style/regionText"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="2.0"
+                android:background="#c881ba47"
+                android:text="菜单"
+                android:textSize="30.0sp" />
+
+            <TextView
+                style="@style/regionText"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="4.0"
+                android:background="#c8009245" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/regionText"
+            android:layout_weight="5.0"
+            android:background="#c8008463"
+            android:text="上一页" />
+    </LinearLayout>
+
+</LinearLayout>

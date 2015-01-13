@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comic_read_menu_brightnessControl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone" 
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/comic_read_menu_brightnessBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:orientation="vertical"
+        android:padding="10.0dip"
+        android:layout_gravity="center" >
+
+        <SeekBar
+            android:id="@+id/comic_read_menu_brightness"
+            android:layout_width="180.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:focusable="false"
+            android:max="100"
+            android:padding="0.0dip"
+            android:progress="50"
+            android:progressDrawable="@drawable/pageseekbg"
+            android:thumb="@drawable/thumb"
+            android:thumbOffset="0.0dip" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/comic_read_menu_brightnessSys"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:background="@drawable/checkbox2"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用系统的亮度"
+                android:textColor="#ffffffff"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

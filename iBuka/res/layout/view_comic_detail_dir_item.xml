@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btn_comic_detail_dir"
+    style="@style/chapGridItem"
+    android:text="3" />

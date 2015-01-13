@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_comic_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff0f1f2" >
+
+    <ImageView
+        style="@style/topbar_back"
+        android:layout_alignParentTop="true" />
+
+    <ImageButton
+        android:id="@+id/comic_loading_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:src="@drawable/read_refresh" />
+
+    <ProgressBar
+        android:id="@+id/read_loading_mm"
+        style="@style/read_loading"
+        android:layout_width="200.0px"
+        android:layout_height="212.0px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true" />
+    <!-- <ImageView -->
+    <!-- android:id="@+id/comic_loading_img" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerInParent="true" -->
+    <!-- android:background="@drawable/l1001" /> -->
+
+    <ProgressBar
+        android:id="@+id/comic_loading_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="150.0dip"
+        android:layout_height="8.0dip"
+        android:layout_below="@id/read_loading_mm"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10.0dip"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/downloaditemprog" />
+
+    <TextView
+        android:id="@+id/comic_loading_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comic_loading_progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10.0dip"
+        android:text="请稍等，正在努力加载。。"
+        android:textColor="@color/listTitle"
+        android:textSize="15.0sp" />
+
+</RelativeLayout>

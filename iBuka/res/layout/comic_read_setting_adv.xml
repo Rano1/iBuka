@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_comic_read_setting_adv"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <RelativeLayout
+        android:id="@+id/set_adv_volume_button_jump_page"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_adv_volume_button_jump_page"
+            style="@style/read_set_text_style"
+            android:text="@string/text_set_adv_volume_button_jump_page" />
+
+        <TextView
+            android:id="@+id/text_set_adv_volume_button_jump_page_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_adv_volume_button_jump_page"
+            android:text="@string/text_set_adv_volume_button_jump_page_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/text_set_adv_volume_button_jump_page_desc" />
+
+        <ImageView
+            android:id="@+id/set_adv_volume_button_jump_page_button"
+            style="@style/read_set_image_button" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_adv_reverse_landscape"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_adv_reverse_landscape"
+            style="@style/read_set_text_style"
+            android:text="@string/text_set_adv_reverse_landscape" />
+
+        <TextView
+            android:id="@+id/text_set_adv_reverse_landscape_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_adv_reverse_landscape"
+            android:text="@string/text_set_adv_reverse_landscape_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/text_set_adv_reverse_landscape_desc" />
+
+        <ImageView
+            android:id="@+id/set_adv_reverse_landscape_button"
+            style="@style/read_set_image_button" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_adv_show_page_info"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_adv_show_page_info"
+            style="@style/read_set_text_style"
+            android:text="@string/text_set_adv_show_page_info" />
+
+        <TextView
+            android:id="@+id/text_set_adv_show_page_info_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_adv_show_page_info"
+            android:text="@string/text_set_adv_show_page_info_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/text_set_adv_show_page_info_desc" />
+
+        <ImageView
+            android:id="@+id/set_adv_show_page_info_button"
+            style="@style/read_set_image_button" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_adv_double_click_enlarge"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_adv_double_click_enlarge"
+            style="@style/read_set_text_style"
+            android:text="@string/text_set_adv_double_click_enlarge" />
+
+        <TextView
+            android:id="@+id/text_set_adv_double_click_enlarge_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_adv_double_click_enlarge"
+            android:text="@string/text_set_adv_double_click_enlarge_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/text_set_adv_double_click_enlarge_desc" />
+
+        <ImageView
+            android:id="@+id/set_adv_double_click_enlarge_button"
+            style="@style/read_set_image_button" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_adv_use_immersive_mode"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_adv_use_immersive_mode"
+            style="@style/read_set_text_style"
+            android:text="@string/text_set_adv_use_immersive_mode" />
+
+        <TextView
+            android:id="@+id/text_set_adv_use_immersive_mode_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_adv_use_immersive_mode"
+            android:text="@string/text_set_adv_use_immersive_mode_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/text_set_adv_use_immersive_mode_desc" />
+
+        <ImageView
+            android:id="@+id/set_adv_use_immersive_mode_button"
+            style="@style/read_set_image_button" />
+    </RelativeLayout>
+
+</LinearLayout> <!-- <?xml version="1.0" encoding="utf-8"?> -->
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!-- android:id="@+id/layout_comic_read_setting_adv" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="match_parent" -->
+<!-- android:orientation="vertical" -->
+<!-- android:visibility="gone"> -->
+
+
+<!-- <RelativeLayout -->
+<!-- android:id="@+id/set_adv_volume_button_jump_page" -->
+<!-- style="@style/read_set_content_unit" > -->
+
+
+<!-- <TextView -->
+<!-- android:id="@+id/text_set_adv_volume_button_jump_page" -->
+<!-- style="@style/read_set_text_style" -->
+<!-- android:text="使用音量键翻页" /> -->
+
+
+<!-- <TextView -->
+<!-- android:id="@+id/text_set_adv_volume_button_jump_page_desc" -->
+<!-- style="@style/read_set_desc_style" -->
+<!-- android:layout_below="@id/text_set_adv_volume_button_jump_page" -->
+<!-- android:text="音量+:上一页,音量-:下一页" /> -->
+
+
+<!-- <View -->
+<!-- style="@style/read_set_split_view" -->
+<!-- android:layout_below="@id/text_set_adv_volume_button_jump_page_desc" /> -->
+
+
+<!-- <CheckBox -->
+<!-- android:id="@+id/set_adv_volume_button_jump_page_button" -->
+<!-- style="@style/read_set_image_button" /> -->
+<!-- </RelativeLayout> -->
+
+
+<!-- <RelativeLayout -->
+<!-- android:id="@+id/set_adv_show_page_info" -->
+<!-- style="@style/read_set_content_unit" > -->
+
+
+<!-- <TextView -->
+<!-- android:id="@+id/text_set_adv_show_page_info" -->
+<!-- style="@style/read_set_text_style" -->
+<!-- android:text="@string/text_set_adv_show_page_info" /> -->
+
+
+<!-- <TextView -->
+<!-- android:id="@+id/text_set_adv_show_page_info_desc" -->
+<!-- style="@style/read_set_desc_style" -->
+<!-- android:layout_below="@id/text_set_adv_show_page_info" -->
+<!-- android:text="@string/text_set_adv_show_page_info_desc" /> -->
+
+
+<!-- <View -->
+<!-- style="@style/read_set_split_view" -->
+<!-- android:layout_below="@id/text_set_adv_show_page_info_desc" /> -->
+
+
+<!-- <CheckBox -->
+<!-- android:id="@+id/set_adv_show_page_info_button" -->
+<!-- style="@style/read_set_image_button" /> -->
+<!-- </RelativeLayout> -->
+
+
+<!-- <RelativeLayout -->
+<!-- android:id="@+id/set_adv_double_click_enlarge" -->
+<!-- style="@style/read_set_content_unit" > -->
+
+
+<!-- <TextView -->
+<!-- android:id="@+id/text_set_adv_double_click_enlarge" -->
+<!-- style="@style/read_set_text_style" -->
+<!-- android:text="@string/text_set_adv_double_click_enlarge" /> -->
+
+
+<!-- <TextView -->
+<!-- android:id="@+id/text_set_adv_double_click_enlarge_desc" -->
+<!-- style="@style/read_set_desc_style" -->
+<!-- android:layout_below="@id/text_set_adv_double_click_enlarge" -->
+<!-- android:text="@string/text_set_adv_double_click_enlarge_desc" /> -->
+
+
+<!-- <View -->
+<!-- style="@style/read_set_split_view" -->
+<!-- android:layout_below="@id/text_set_adv_double_click_enlarge_desc" /> -->
+
+
+<!-- <CheckBox -->
+<!-- android:id="@+id/set_adv_double_click_enlarge_button" -->
+<!-- style="@style/read_set_image_button" /> -->
+<!-- </RelativeLayout> -->
+
+
+<!-- </LinearLayout> -->

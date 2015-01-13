@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout style="@style/topbar" >
+
+        <ImageButton
+            android:id="@+id/localMangaBack"
+            style="@style/topbar_back_btn" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/moreLocalManga"
+            android:textColor="@color/listTitle"
+            android:textSize="15.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/localMangaHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_marginTop="48.0dip"
+        android:background="@drawable/item_higlight" >
+
+        <TextView
+            android:id="@+id/localMangaDir"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="start"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="100.0dip"
+            android:singleLine="true"
+            android:textColor="@color/listTitle"
+            android:textSize="13.0sp" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/list_line" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listLocalManga"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/localMangaHeader"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_line"
+        android:fadingEdge="none"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="#00000000" />
+
+    <ImageView
+        style="@style/shadow_top"
+        android:layout_marginTop="48.0dip" />
+
+    <ImageView
+        style="@style/shadow_bottom"
+        android:layout_alignParentBottom="true" />
+
+<!--     <include layout="@layout/viewdownloadstate" /> -->
+
+</RelativeLayout>

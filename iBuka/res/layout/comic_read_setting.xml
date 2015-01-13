@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff1a1a1a"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activity_read_setting_top_height" >
+
+                <RadioGroup
+                    android:id="@+id/setting_radiogroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/activity_read_setting_top_height"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/top_tab_2_bg"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/setting_rbtn_readmode"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="@string/read_setting_readmode"
+                        android:textColor="@drawable/bar_btn_text_color_emph" />
+
+                    <View
+                        android:layout_width="1.0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="12.0px"
+                        android:layout_marginTop="12.0px"
+                        android:background="@color/split_Black" />
+
+                    <RadioButton
+                        android:id="@+id/setting_rbtn_advance"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="@string/read_setting_advance"
+                        android:textColor="@drawable/bar_btn_text_color" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dip"
+                    android:layout_alignBottom="@id/setting_radiogroup"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/setting_rbtn_readmode_divide"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dip"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/top_tab_2_no_divide" />
+
+                    <ImageView
+                        android:id="@+id/setting_rbtn_advance_divide"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dip"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/top_tab_2_no_divide"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <include layout="@layout/comic_read_setting_read" />
+
+                <include layout="@layout/comic_read_setting_adv" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

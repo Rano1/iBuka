@@ -9,9 +9,16 @@ import com.buka.R;
 import com.buka.db.DBHelper;
 import com.buka.db.DBUtil;
 import com.buka.entity.CateEntity;
+import com.buka.entity.ComicChapter;
+import com.buka.entity.ComicContent;
 import com.buka.entity.ComicEntity;
 
 public class Constants {
+	public static String SETTING = "SETTING";
+	public static String MODE_HORZ = "horz";
+	public static String MODE_VERT = "vert";
+	public static String MODE_VERT_SLIDE = "slide";
+	public static String MODE_VERT_FLOW = "flow";
 	//
 	public final static String IMG_URL =  "img_url";
 	/** 　漫画ID */
@@ -50,6 +57,11 @@ public class Constants {
 	public final static String COVER_WIDTH = "cover_width";
 	/** 　封面高度 */
 	public final static String COVER_HEIGHT = "cover_height";
+	// 漫画详情页
+	/** 漫画页数 */
+	public final static String PAGE = "page";
+	/** 漫画总页数 */
+	public final static String TOTALPAGES = "totalpages";
 	
 //	public static ArrayList<CateEntity> getCateList() {
 //		ArrayList<CateEntity> list = new ArrayList<CateEntity>();
@@ -61,18 +73,18 @@ public class Constants {
 //		return list;
 //	}
 
-	public static final String[] IMAGES_CATE = new String[] {
-		"http://t1.baidu.com/it/u=1038806409,3412540273&fm=21&gp=0.jpg",
-		"http://t10.baidu.com/it/u=50697511,3492324182&fm=21&gp=0.jpg",
-		"http://t11.baidu.com/it/u=4261091401,2809499977&fm=23&gp=0.jpg",
-		"http://t2.baidu.com/it/u=664664776,2474321331&fm=21&gp=0.jpg",
-		"http://t2.baidu.com/it/u=2000984254,671030445&fm=21&gp=0.jpg",
-		"http://t12.baidu.com/it/u=1000694325,536197580&fm=21&gp=0.jpg",
-		"http://t3.baidu.com/it/u=2877325771,2951626559&fm=21&gp=0.jpg",
-		"http://t2.baidu.com/it/u=4217487879,1939311980&fm=21&gp=0.jpg",
-		"http://t11.baidu.com/it/u=2154075125,3961488333&fm=21&gp=0.jpg",
-		"http://t11.baidu.com/it/u=111124280,2109575648&fm=21&gp=0.jpg",
-		"http://t11.baidu.com/it/u=1256943453,3366981119&fm=23&gp=0.jpg", };
+//	public static final String[] IMAGES_CATE = new String[] {
+//		"http://t1.baidu.com/it/u=1038806409,3412540273&fm=21&gp=0.jpg",
+//		"http://t10.baidu.com/it/u=50697511,3492324182&fm=21&gp=0.jpg",
+//		"http://t11.baidu.com/it/u=4261091401,2809499977&fm=23&gp=0.jpg",
+//		"http://t2.baidu.com/it/u=664664776,2474321331&fm=21&gp=0.jpg",
+//		"http://t2.baidu.com/it/u=2000984254,671030445&fm=21&gp=0.jpg",
+//		"http://t12.baidu.com/it/u=1000694325,536197580&fm=21&gp=0.jpg",
+//		"http://t3.baidu.com/it/u=2877325771,2951626559&fm=21&gp=0.jpg",
+//		"http://t2.baidu.com/it/u=4217487879,1939311980&fm=21&gp=0.jpg",
+//		"http://t11.baidu.com/it/u=2154075125,3961488333&fm=21&gp=0.jpg",
+//		"http://t11.baidu.com/it/u=111124280,2109575648&fm=21&gp=0.jpg",
+//		"http://t11.baidu.com/it/u=1256943453,3366981119&fm=23&gp=0.jpg", };
 
 	public static final String[] IMAGES_FAVOR_COLLECT = new String[] {
 			"http://t1.baidu.com/it/u=3061284966,2756044882&fm=23&gp=0.jpg",
@@ -205,6 +217,47 @@ public class Constants {
 			cate.setName(cursor.getString(cursor.getColumnIndex(Constants.CNAME)));
 			cate.setImg_url(cursor.getString(cursor.getColumnIndex(Constants.IMG_URL)));
 			list.add(cate);
+		}
+		return list;
+	}
+	
+	/**
+	 * 获取章节
+	 */
+	public static ArrayList<ComicChapter> getChapter(Context context , Integer mid){
+		ArrayList<ComicChapter> list = new ArrayList<ComicChapter>();
+		Cursor cursor = null;
+		String selection = Constants.MID + " = ?";
+		String[] selectionArgs = new String[]{ String.valueOf(mid) };
+		cursor = DBUtil.getInstance(context, DBHelper.TABLE_CHAPTER).selectData(null, selection, selectionArgs, null, null, null);
+		while(cursor.moveToNext()){
+			ComicChapter chapter = new ComicChapter();
+			chapter.setMid(cursor.getInt(cursor.getColumnIndex(Constants.MID)));
+			chapter.setCid(cursor.getInt(cursor.getColumnIndex(Constants.CID)));
+			chapter.setCname(cursor.getString(cursor.getColumnIndex(Constants.CNAME)));
+			list.add(chapter);
+		}
+		return list;
+	}
+	
+	/**
+	 * 获取章节
+	 */
+	public static ArrayList<ComicContent> getComicContent(Context context , Integer mid , Integer cid){
+		ArrayList<ComicContent> list = new ArrayList<ComicContent>();
+		Cursor cursor = null;
+		String selection = Constants.MID + " = ? " + " and " + Constants.CID +  " = ? ";
+		String[] selectionArgs = new String[]{ String.valueOf(mid) , String.valueOf(cid)};
+		String orderBy = Constants.PAGE;
+		cursor = DBUtil.getInstance(context, DBHelper.TABLE_CONTENT).selectData(null, selection, selectionArgs, null, null, orderBy);
+		while(cursor.moveToNext()){
+			ComicContent content = new ComicContent();
+			content.setMid(cursor.getInt(cursor.getColumnIndex(Constants.MID)));
+			content.setCid(cursor.getInt(cursor.getColumnIndex(Constants.CID)));
+			content.setImg_url(cursor.getString(cursor.getColumnIndex(Constants.IMG_URL)));
+			content.setPage(cursor.getInt(cursor.getColumnIndex(Constants.PAGE)));
+			content.setTotalpages(cursor.getInt(cursor.getColumnIndex(Constants.TOTALPAGES)));
+			list.add(content);
 		}
 		return list;
 	}

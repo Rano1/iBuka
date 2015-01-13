@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:id="@+id/layout_comic_read_setting_vert" >
+
+    <RelativeLayout
+        android:id="@+id/set_vert_mode_slide_page"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_vert_mode_slide_page"
+            style="@style/read_set_text_style"
+            android:text="@string/text_set_vert_mode_slide_page" />
+
+        <TextView
+            android:id="@+id/text_set_vert_mode_slide_page_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_vert_mode_slide_page"
+            android:text="@string/text_set_vert_mode_slide_page_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/text_set_vert_mode_slide_page_desc" />
+
+        <CheckBox
+            android:id="@+id/set_vert_mode_slide_page_button"
+            style="@style/read_set_image_button"
+            android:layout_marginRight="10dip"  />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_vert_mode_slide_page_clip_bord"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_vert_mode_slide_page_clip_bord"
+            style="@style/read_set_text_style"
+            android:text="@string/text_set_vert_mode_slide_page_clip_bord" />
+
+        <TextView
+            android:id="@+id/text_set_vert_mode_slide_page_clip_bord_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_vert_mode_slide_page_clip_bord"
+            android:text="@string/text_set_vert_mode_slide_page_clip_bord_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/text_set_vert_mode_slide_page_clip_bord_desc" />
+
+        <CheckBox
+            android:id="@+id/set_vert_mode_slide_page_clip_bord_button"
+            style="@style/read_set_image_button"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_vert_mode_flow_page"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_vert_mode_flow_page"
+            style="@style/read_set_text_style"
+            android:text="@string/text_set_vert_mode_flow_page" />
+
+        <TextView
+            android:id="@+id/text_set_vert_mode_flow_page_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_vert_mode_flow_page"
+            android:text="@string/text_set_vert_mode_flow_page_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/text_set_vert_mode_flow_page_desc" />
+
+        <CheckBox
+            android:id="@+id/set_vert_mode_flow_page_button"
+            style="@style/read_set_image_button" 
+            android:layout_marginRight="10dip"/>
+    </RelativeLayout>
+
+</LinearLayout>

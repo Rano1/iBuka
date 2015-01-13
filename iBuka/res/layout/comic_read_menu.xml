@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_comic_read_menu_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/read_menu_top_bg" >
+
+            <ImageButton
+                android:id="@+id/readerMenuExit"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:background="@drawable/readmenu_btn"
+                android:onClick="return_Back"
+                android:src="@drawable/icon_rm_back" />
+
+            <Button
+                android:id="@+id/readerMenuRegionTipsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/readmenu_btn"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:text="操作提醒"
+                android:textColor="@color/readMenuBtnText"
+                android:textSize="13.0dip" />
+
+            <TextView
+                android:id="@+id/readerMenuMangaInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="60.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_toLeftOf="@id/readerMenuRegionTipsBtn"
+                android:ellipsize="start"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/readMenuBtnText"
+                android:textSize="13.0dip" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/shadow_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_comic_read_menu_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/shadow_bottom" />
+
+        <LinearLayout
+            android:id="@+id/menu_bottom_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/read_menu_bottom_bg"
+            android:gravity="center_vertical"
+            android:minHeight="50.0dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="6.0"
+                android:gravity="center_vertical" >
+
+                <SeekBar
+                    android:id="@+id/comic_read_menu_pageSeekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:focusable="false"
+                    android:max="100"
+                    android:padding="0.0dip"
+                    android:progress="1"
+                    android:progressDrawable="@drawable/pageseekbg"
+                    android:thumb="@drawable/thumb"
+                    android:thumbOffset="10.0px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_comic_read_menu_ButtonsParent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.0"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/comic_read_menu_pageTips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_comic_read_menu_bottom_bar"
+        android:layout_marginBottom="3.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="@drawable/dialog_bg"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="10.0dip"
+        android:textColor="@color/readMenuBtnText"
+        android:textSize="18.0sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout style="@style/topbar" >
+
+        <ImageView
+            android:id="@+id/dlBack"
+            style="@style/topbar_back_btn" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/moreDownloadMar"
+            android:textColor="@color/listTitle"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dlTopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_marginTop="48.0dip"
+        android:background="@drawable/item_higlight" >
+
+        <TextView
+            android:id="@+id/globalInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="48.0dip"
+            android:singleLine="true"
+            android:textColor="@color/text"
+            android:textSize="13.0sp" />
+
+        <ImageButton
+            android:id="@+id/globalControBtn"
+            android:layout_width="45.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/dl_resume_s" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/list_line" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/DlList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="96.0dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_line"
+        android:fadingEdge="none"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="#00000000" />
+
+    <LinearLayout
+        android:id="@+id/emptyTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/emptyTips"
+            android:text="@string/DelEmptyTips" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/shadow_top"
+        android:layout_marginTop="96.0dip" />
+
+    <ImageView
+        style="@style/shadow_bottom"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

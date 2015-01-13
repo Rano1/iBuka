@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/dItemInfoBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/dItemChapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="14.0dip"
+            android:gravity="center_vertical"
+            android:textColor="@color/listTitle"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@+id/dItemTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/dItemChapter"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="100.0dip"
+            android:layout_toRightOf="@id/dItemChapter"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:textColor="@color/text"
+            android:textSize="13.0sp" />
+
+        <ProgressBar
+            android:id="@+id/dItemProg"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="4.0dip"
+            android:layout_below="@id/dItemChapter"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_marginTop="5.0dip"
+            android:max="100"
+            android:progress="40"
+            android:progressDrawable="@drawable/downloaditemprog" />
+
+        <TextView
+            android:id="@+id/dItemProgText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/dItemChapter"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50.0dip"
+            android:gravity="bottom"
+            android:textColor="@color/text"
+            android:textSize="13.0sp" />
+
+        <CheckBox
+            android:id="@+id/dItemBtn"
+            android:layout_width="50.0dip"
+            android:layout_height="60.0dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/download_btn"
+            android:button="@null" />
+
+        <CheckBox
+            android:id="@+id/dItemSel"
+            android:layout_width="50.0dip"
+            android:layout_height="60.0dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/checkbox"
+            android:button="@null" />
+    </RelativeLayout>
+
+</LinearLayout>

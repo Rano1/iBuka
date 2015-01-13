@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_comic_read_setting_read_mode"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="46.0dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="阅读"
+            android:textColor="@color/read_mode_setting_text"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/read_mode_setting_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/read_set_mode_horz"
+                style="@style/read_set_read_mode_switch"
+                android:background="@color/read_mode_setting_split_color"
+                android:text="横屏"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/read_set_mode_vert"
+                style="@style/read_set_read_mode_switch"
+                android:layout_marginRight="12.0dip"
+                android:background="@color/read_mode_setting_split_bg_color"
+                android:text="竖屏"
+                android:textColor="@android:color/white" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@color/read_mode_setting_split_color" />
+    </RelativeLayout>
+
+    <include layout="@layout/comic_read_setting_horz" />
+
+    <include layout="@layout/comic_read_setting_vert" />
+
+</LinearLayout>

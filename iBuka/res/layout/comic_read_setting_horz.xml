@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/layout_comic_read_setting_horz" >
+
+    <RelativeLayout
+        android:id="@+id/set_horz_flow_page"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_horz_flow_page"
+            style="@style/read_set_text_style"
+            android:text="@string/setting_horz_flow_page" />
+
+        <TextView
+            android:id="@+id/text_set_horz_flow_page_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_horz_flow_page"
+            android:text="@string/setting_horz_flow_page_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/text_set_horz_flow_page_desc" />
+
+        <CheckBox
+            android:id="@+id/set_horz_flow_page_button"
+            style="@style/read_set_image_button"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_smt_clip_page"
+        style="@style/read_set_content_unit" >
+
+        <TextView
+            android:id="@+id/text_set_smt_clip_page"
+            style="@style/read_set_text_style"
+            android:text="@string/setting_horz_flow_clip_page" />
+
+        <TextView
+            android:id="@+id/setting_horz_flow_clip_page_desc"
+            style="@style/read_set_desc_style"
+            android:layout_below="@id/text_set_smt_clip_page"
+            android:text="@string/setting_horz_flow_clip_page_desc" />
+
+        <View
+            style="@style/read_set_split_view"
+            android:layout_below="@id/setting_horz_flow_clip_page_desc" />
+
+        <CheckBox
+            android:id="@+id/set_smt_clip_page_button"
+            style="@style/read_set_image_button"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+
+</LinearLayout>

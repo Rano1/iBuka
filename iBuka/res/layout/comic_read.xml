@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black" >
+
+    <RelativeLayout
+        android:id="@+id/layout_comic_read"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/comic_read_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@android:color/black"
+            android:dividerHeight="2dip"
+            android:fadingEdge="none"
+            android:visibility="gone" >
+        </ListView>
+
+        <!-- <com.buka.view.ZoomableListView -->
+        <!-- android:id="@+id/comic_read_listview" -->
+        <!-- android:layout_width="fill_parent" -->
+        <!-- android:layout_height="fill_parent" -->
+        <!-- android:divider="@android:color/black" -->
+        <!-- android:dividerHeight="2dip" -->
+        <!-- android:fadingEdge="none" -->
+        <!-- android:visibility="gone" /> -->
+        <!-- <android.support.v4.view.ViewPager -->
+        <!-- android:id="@+id/comic_read_viewpager" -->
+        <!-- android:layout_width="fill_parent" -->
+        <!-- android:layout_height="fill_parent" /> -->
+
+        <com.buka.gallery.GalleryViewPager
+            android:id="@+id/comic_read_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:visibility="gone" />
+
+        <include
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            layout="@layout/comic_read_info" />
+    </RelativeLayout>
+
+    <include layout="@layout/comic_read_region_tips" />
+
+    <com.buka.view.ReadMenuView
+        android:id="@+id/readMenuView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <include layout="@layout/comic_read_loading" />
+
+    <include layout="@layout/comic_read_menu_brightness" />
+
+</RelativeLayout>

@@ -24,8 +24,14 @@ public class DBHelper extends SQLiteOpenHelper {
 	 */
 	private static String DB_NAME = "database.db";
 	private static String ASSETS_NAME = "database.db";
+	/** 漫画表 */
 	public final static String TABLE_COMIC = "comic";
+	/** 类型表 */
 	public final static String TABLE_CATE = "cate";
+	/** 章节表 */
+	public final static String TABLE_CHAPTER = "chapter";
+	/** 内容节表 */
+	public final static String TABLE_CONTENT = "content";
 	private SQLiteDatabase myDataBase = null;
 	private final Context myContext;
 

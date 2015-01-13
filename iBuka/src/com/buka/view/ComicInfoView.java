@@ -2,11 +2,13 @@ package com.buka.view;
 
 import android.view.View.OnClickListener;
 
+import com.buka.ComicReadActivity;
 import com.buka.R;
 import com.buka.entity.ComicEntity;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,8 +76,7 @@ public class ComicInfoView extends RelativeLayout implements OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_comic_dir_read:
-//			startActivity(new Intent(getApplicationContext(),
-//			ComicReadActivity.class));
+			getContext().startActivity(new Intent(getContext(),ComicReadActivity.class));
 			break;
 		case R.id.layout_comic_detail_info_Desc:
 			if (detail_intr_close_status) {
